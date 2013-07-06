@@ -1,0 +1,20 @@
+<RCC>
+
+  <qresource prefix='/plugins/tableManager'>
+    <file>icons/gis/tableManagerIcon.png</file>
+    <file>icons/tableManagerIcon.png</file>
+  </qresource>
+
+  <qresource prefix='/plugins/tableManager/dialog'>
+    <file>icons/tableManagerIcon.png</file>
+    <file>icons/tableManagerIcon3.png</file>
+    <file>icons/crystalsvg_1uparrow.png</file>
+    <file>icons/crystalsvg_1downarrow.png</file>
+    <file>icons/mActionCopySelected.png</file>
+    <file>icons/mActionDeleteAttribute.png</file>
+    <file>icons/mActionFileSave.png</file>
+    <file>icons/mActionFileSaveAs.png</file>
+    <file>icons/mActionNewAttribute.png</file>
+  </qresource>
+
+</RCC>
