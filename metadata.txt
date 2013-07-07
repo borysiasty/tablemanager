@@ -10,10 +10,10 @@
 
 [general]
 name=Table Manager
-qgisMinimumVersion=1.7
-#qgisMaximumVersion=1.99
 description=Manages the attribute table structure
-version=0.4.4
+description[pl]=Zarządza strukturą tabeli atrybutów
+version=0.5
+qgisMinimumVersion=2.0
 
 # Optional items:
 
@@ -25,7 +25,7 @@ category=Vector
 
 homepage=http://hub.qgis.org/projects/tablemanager
 tracker=http://hub.qgis.org/projects/tablemanager/issues
-#repository=http://hub.qgis.org/projects/tablemanager/repository
+repository=http://github.com/borysiasty/tablemanager
 icon=icons/tableManagerIcon.png
 experimental=False
 

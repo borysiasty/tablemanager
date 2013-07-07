@@ -1,28 +1,19 @@
 # -*- coding: utf-8 -*-
-#-----------------------------------------------------------
+
+# ***************************************************************************
 #
-# Table Manager
-# Copyright (C) 2008-2011 Borys Jurgiel
+# TableManager
 #
-#-----------------------------------------------------------
+# Copyright (C) 2008 Borys Jurgiel
 #
-# licensed under the terms of GNU GPL 2
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License along
-# with this program; if not, print to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-#
-#---------------------------------------------------------------------
+# ***************************************************************************
+# *                                                                         *
+# *   This program is free software; you can redistribute it and/or modify  *
+# *   it under the terms of the GNU General Public License as published by  *
+# *   the Free Software Foundation; either version 2 of the License, or     *
+# *   (at your option) any later version.                                   *
+# *                                                                         *
+# ***************************************************************************
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -76,8 +67,8 @@ class tableManager:
   self.action = QAction(self.getThemeIcon("tableManagerIcon.png"), QCoreApplication.translate('TableManager','Table manager'), self.iface.mainWindow())
   #self.action = QAction(QIcon(':/plugins/tableManager/icons/tableManagerIcon.png'), QCoreApplication.translate('TableManager','Table manager'), self.iface.mainWindow())
   self.action.setWhatsThis(QCoreApplication.translate('TableManager','Manages attribute table structure'))
-  QObject.connect(self.action, SIGNAL('triggered()'), self.run)
-  QObject.connect(self.iface, SIGNAL("currentThemeChanged ( QString )"), self.setCurrentTheme)
+  self.action.triggered.connect(self.run)
+  self.iface.currentThemeChanged.connect(self.setCurrentTheme)
   # add toolbar button and menu item
   if hasattr( self.iface, 'addVectorToolBarIcon' ):
     self.iface.addVectorToolBarIcon(self.action)

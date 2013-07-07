@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="">
 <context>
     <name>Clone</name>
     <message>
@@ -171,37 +170,37 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>DialogClone</name>
     <message>
-        <location filename="../tableManager_gui.py" line="96"/>
+        <location filename="../tableManager_gui.py" line="87"/>
         <source>Clone field</source>
         <translation>Cloner un champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="79"/>
+        <location filename="../tableManager_gui.py" line="70"/>
         <source>Clone field: </source>
         <translation>Cloner un champ : </translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="80"/>
+        <location filename="../tableManager_gui.py" line="71"/>
         <source>at the first position</source>
         <translation>en première position</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="82"/>
-        <source>after the %1 field</source>
-        <translation>après le champ %1</translation>
+        <location filename="../tableManager_gui.py" line="73"/>
+        <source>after the {0} field</source>
+        <translation>après le champ {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="89"/>
+        <location filename="../tableManager_gui.py" line="80"/>
         <source>The new name cannot be empty</source>
         <translation>Le nouveau nom ne doit pas être vide</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="92"/>
+        <location filename="../tableManager_gui.py" line="83"/>
         <source>The new field&apos;s name must be different then source&apos;s one!</source>
         <translation>Le nouveau nom doit être différent de l&apos;ancien !</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="96"/>
+        <location filename="../tableManager_gui.py" line="87"/>
         <source>There is another field with the same name.
 Please type different one.</source>
         <translation>Ce nom est déjà attribué à un autre champ.
@@ -211,47 +210,47 @@ Merci d&apos;en choisir un différent.</translation>
 <context>
     <name>DialogInsert</name>
     <message>
-        <location filename="../tableManager_gui.py" line="114"/>
+        <location filename="../tableManager_gui.py" line="105"/>
         <source>Insert field</source>
         <translation>Insérer un champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="116"/>
+        <location filename="../tableManager_gui.py" line="107"/>
         <source>Integer</source>
         <translation>Entier</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="117"/>
+        <location filename="../tableManager_gui.py" line="108"/>
         <source>Real</source>
         <translation>Réel</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="118"/>
+        <location filename="../tableManager_gui.py" line="109"/>
         <source>String</source>
         <translation>Caractères</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="119"/>
+        <location filename="../tableManager_gui.py" line="110"/>
         <source>at the first position</source>
         <translation>en première position</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="121"/>
-        <source>after the %1 field</source>
-        <translation>après le champ %1</translation>
+        <location filename="../tableManager_gui.py" line="112"/>
+        <source>after the {0} field</source>
+        <translation>après le champ {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="130"/>
+        <location filename="../tableManager_gui.py" line="121"/>
         <source>Insert new field</source>
         <translation>Insérer un nouveau champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="126"/>
+        <location filename="../tableManager_gui.py" line="117"/>
         <source>The new name cannot be empty</source>
         <translation>Le nouveau nom ne doit pas être vide</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="130"/>
+        <location filename="../tableManager_gui.py" line="121"/>
         <source>There is another field with the same name.
 Please type different one.</source>
         <translation>Ce nom est déjà attribué à un autre champ.
@@ -261,24 +260,24 @@ Merci d&apos;en choisir un différent.</translation>
 <context>
     <name>DialogRename</name>
     <message>
-        <location filename="../tableManager_gui.py" line="60"/>
+        <location filename="../tableManager_gui.py" line="51"/>
         <source>Rename field</source>
         <translation>Renommer un champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="46"/>
-        <source>Rename field: %1</source>
-        <translation>Renommer le champ : %1</translation>
+        <location filename="../tableManager_gui.py" line="37"/>
+        <source>Rename field: {0}</source>
+        <translation>Renommer le champ : {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="57"/>
+        <location filename="../tableManager_gui.py" line="48"/>
         <source>There is another field with the same name.
 Please type different one.</source>
         <translation>Ce nom est déjà attribué à un autre champ.
 Merci d&apos;en choisir un différent.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="60"/>
+        <location filename="../tableManager_gui.py" line="51"/>
         <source>The new name cannot be empty</source>
         <translation>Le nouveau nom ne doit pas être vide</translation>
     </message>
@@ -322,128 +321,128 @@ Merci d&apos;en choisir un différent.</translation>
 <context>
     <name>TableManager</name>
     <message>
-        <location filename="../tableManager_gui.py" line="667"/>
+        <location filename="../tableManager_gui.py" line="675"/>
         <source>Table Manager</source>
         <translation>Gestionnaire de table</translation>
     </message>
     <message>
-        <location filename="../tableManager_plugin.py" line="94"/>
+        <location filename="../tableManager_plugin.py" line="101"/>
         <source>Table manager</source>
         <translation>Gestionnaire de table</translation>
     </message>
     <message>
-        <location filename="../tableManager_plugin.py" line="75"/>
+        <location filename="../tableManager_plugin.py" line="69"/>
         <source>Manages attribute table structure</source>
         <translation>Gère la structure attributaire de la table</translation>
     </message>
     <message>
-        <location filename="../tableManager_plugin.py" line="92"/>
+        <location filename="../tableManager_plugin.py" line="99"/>
         <source>Please select a vector layer</source>
         <translation>Merci de sélectionner une couche vectorielle</translation>
     </message>
     <message>
-        <location filename="../tableManager_plugin.py" line="94"/>
+        <location filename="../tableManager_plugin.py" line="101"/>
         <source>The selected layer is currently in editing mode.
 Please exit this mode before managing the table.</source>
         <translation>La couche sélectionnée est en cours d&apos;édition.
 Merci de sortir de ce mode avant de gérer sa structure.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="181"/>
-        <source>Table Manager: %1</source>
-        <translation>Gestionnaire de table : %1</translation>
+        <location filename="../tableManager_gui.py" line="614"/>
+        <source>Table Manager: {0}</source>
+        <translation>Gestionnaire de table : {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="214"/>
+        <location filename="../tableManager_gui.py" line="208"/>
         <source>Reading data </source>
         <translation>Lecture des données</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="250"/>
+        <location filename="../tableManager_gui.py" line="237"/>
         <source>Drawing table</source>
         <translation>Lecture en cours</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="378"/>
+        <location filename="../tableManager_gui.py" line="360"/>
         <source>Are you sure you want to remove the following fields?
-%1</source>
+{0}</source>
         <translation>Etes-vous sûr de vouloir supprimer ces champs ?
-%1</translation>
+{0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="379"/>
+        <location filename="../tableManager_gui.py" line="361"/>
         <source>Delete field</source>
         <translation>Suppression de champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="475"/>
-        <source>I cannot determine the layer source file: %1 !
+        <location filename="../tableManager_gui.py" line="458"/>
+        <source>I cannot determine the layer source file: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
-        <translation>Le fichier source de cette couche est inconnu : %1 !
+        <translation>Le fichier source de cette couche est inconnu : {0} !
 La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="479"/>
-        <source>Failed saving the changes to the temporary directory: %1 !
+        <location filename="../tableManager_gui.py" line="462"/>
+        <source>Failed saving the changes to the temporary directory: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
-        <translation>L&apos;enregistrement des modifications dans le dossier temporaire a échoué : %1 !
+        <translation>L&apos;enregistrement des modifications dans le dossier temporaire a échoué : {0} !
 La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="493"/>
-        <source>Failed backuping the old table to %1.dbf~
+        <location filename="../tableManager_gui.py" line="478"/>
+        <source>Failed backuping the old table to {0}.dbf~
 The layer won&apos;t be changed, please use the Save As button.</source>
-        <translation>Echec de la copie de secours de l&apos;ancienne table vers %1.dbf~
+        <translation>Echec de la copie de secours de l&apos;ancienne table vers {0}.dbf~
 La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="503"/>
-        <source>WARNING! I can neither save the new %1.dbf file
-nor restore it from the %2.dbf~ backup.
+        <location filename="../tableManager_gui.py" line="489"/>
+        <source>WARNING! I can neither save the new {0}.dbf file
+nor restore it from the {0}.dbf~ backup.
 Please check it manually!</source>
-        <translation>ATTENTION ! Je ne peux pas enregistrer le nouveau fichier %1.dbf
-ni le restaurer depuis la copie %2.dbf~
+        <translation>ATTENTION ! Je ne peux pas enregistrer le nouveau fichier {0}.dbf
+ni le restaurer depuis la copie {0}.dbf~
 Merci de faire une vérification manuelle !</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="507"/>
-        <source>Failed saving the changes to %1.dbf
+        <location filename="../tableManager_gui.py" line="493"/>
+        <source>Failed saving the changes to {0}.dbf
 The layer will not be changed, please use the Save As button.</source>
-        <translation>L&apos;enregistrement des modifications vers %1.dbf a échoué.
+        <translation>L&apos;enregistrement des modifications vers {0}.dbf a échoué.
 La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="519"/>
+        <location filename="../tableManager_gui.py" line="505"/>
         <source>WARNING! The changes seem to be commited, but I can&apos;t reload the layer!
 Please check it out!
-The old table is backuped as %1.dbf~.</source>
+The old table is backuped as {0}.dbf~.</source>
         <translation>ATTENTION ! Les modifications semblent bien appliquées mais je n&apos;arrive pas à recharger la couche !
 Merci de vérifier ce qui ne va pas !
-L&apos;ancienne table est sauvegardée sous le nom : %1.dbf~.</translation>
+L&apos;ancienne table est sauvegardée sous le nom : {0}.dbf~.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="522"/>
+        <location filename="../tableManager_gui.py" line="508"/>
         <source>Saving successful</source>
         <translation>Enregistrement réussi</translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="517"/>
-        <source>Saving successful. The old table has been backuped as %1.dbf~. Do you wish to keep the old symbology? Note that if the clasyfying field was moved, all objects may become invisible. In that case please adjust the symbology manually.</source>
-        <translation type="obsolete">Enregistrement réussi. L&apos;ancienne table est sauvegardée sous le nom : %1.dbf~.
+        <source>Saving successful. The old table has been backuped as {0}.dbf~. Do you wish to keep the old symbology? Note that if the clasyfying field was moved, all objects may become invisible. In that case please adjust the symbology manually.</source>
+        <translation type="obsolete">Enregistrement réussi. L&apos;ancienne table est sauvegardée sous le nom : {0}.dbf~.
 Voulez-vous conserver l&apos;ancienne symbologie ? Notez que si le champ de classification a été déplacé, tous les objets risquent de devenir invisibles. Dans ce cas, merci d&apos;ajuster la symbologie à la main.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="546"/>
+        <location filename="../tableManager_gui.py" line="536"/>
         <source>Save as</source>
         <translation>Enregistrer sous</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="598"/>
+        <location filename="../tableManager_gui.py" line="588"/>
         <source>You are attemping to save the changes to the original file. Are you sure you want to do this? If yes, the original layer will be removed from the legend.</source>
         <translation>Vous tentez d&apos;enregistrer les modifications sur le fichier d&apos;origine. Etes-vous sûr de le vouloir ? Si oui, la couche d&apos;origine sera retirée de la légende.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="611"/>
+        <location filename="../tableManager_gui.py" line="605"/>
         <source>WARNING! The new layer seems to be created, but is invalid.
 It won&apos;t be loaded.</source>
         <translation>Attention ! La nouvelle couche semble bien créée mais elle n&apos;est pas valide.
@@ -452,45 +451,50 @@ Elle ne sera pas chargée.</translation>
     <message>
         <location filename="../tableManager_gui.py" line="617"/>
         <source>Table Manager: </source>
-        <translation>Gestionnaire de tables : </translation>
+        <translation type="obsolete">Gestionnaire de tables : </translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="630"/>
+        <location filename="../tableManager_gui.py" line="627"/>
         <source>Cannot overwrite an existing shapefile.
 Please remove it manually.</source>
         <translation>Echec de l&apos;enregistrement du fichier shape (un fichier existe avec le meme nom).
 Merci de le supprimer manuellement.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="633"/>
+        <location filename="../tableManager_gui.py" line="630"/>
         <source>Saving data:</source>
         <translation>Enregistrement des données :</translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="639"/>
         <source>Error creating file. Probably the choosen format doesn&apos;t handle that data.</source>
-        <translation>Erreur dans la création du fichier. Le format choisi de gère probablement pas ces données.</translation>
+        <translation type="obsolete">Erreur dans la création du fichier. Le format choisi de gère probablement pas ces données.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="666"/>
+        <location filename="../tableManager_gui.py" line="674"/>
         <source>The table contains unsaved changes. Do you really want to quit?</source>
         <translation>Vos modifications apportées à la table n&apos;ont pas été enregistrées. Voulez-vous vraiment quitter ?</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="526"/>
+        <location filename="../tableManager_gui.py" line="512"/>
         <source>This layer will be reloaded without its previous style (loading style failed)</source>
         <translation>Cette couche sera rechargée sans son style précédent (le chargement du style a échoué)</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="522"/>
-        <source>Saving successful. The old table has been backuped as %1.dbf~.
+        <location filename="../tableManager_gui.py" line="508"/>
+        <source>Saving successful. The old table has been backuped as {0}.dbf~.
 Do you wish to keep the layer style?
 
 Note that if the style depends on an attribute you&apos;ve renamed, all features on the layer will become invisible. In that case please adjust the style manually.</source>
-        <translation>Enregistrement réussi. L&apos;ancienne table est sauvegardée sous le nom : %1.dbf~.
+        <translation>Enregistrement réussi. L&apos;ancienne table est sauvegardée sous le nom : {0}.dbf~.
 Voulez-vous conserver l&apos;ancien style ?
 
 Notez que si le style dépend d&apos;un attribut modifié, tous les objets de la couche risquent de devenir invisibles. Dans ce cas, vous pourrez ajuster le style à la main.</translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="646"/>
+        <source>Error creating file. The errror message was:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

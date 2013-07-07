@@ -158,7 +158,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="81"/>
-        <source>after the %1 field</source>
+        <source>after the {0} field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -212,7 +212,7 @@ Please type different one.</source>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="124"/>
-        <source>after the %1 field</source>
+        <source>after the {0} field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -236,7 +236,7 @@ Please type different one.</source>
     <name>DialogRename</name>
     <message>
         <location filename="../tableManager_gui.py" line="46"/>
-        <source>Rename field: %1</source>
+        <source>Rename field: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -323,7 +323,7 @@ Please use Save As button instead.</source>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="184"/>
-        <source>Table Manager: %1</source>
+        <source>Table Manager: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -339,7 +339,7 @@ Please use Save As button instead.</source>
     <message>
         <location filename="../tableManager_gui.py" line="381"/>
         <source>Are you sure you want to remove the following fields?
-%1</source>
+{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -354,32 +354,32 @@ Please use Save As button instead.</source>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="478"/>
-        <source>I cannot determine the layer source file: %1 !
+        <source>I cannot determine the layer source file: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="482"/>
-        <source>Failed saving the changes to the temporary directory: %1 !
+        <source>Failed saving the changes to the temporary directory: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="489"/>
-        <source>Failed backuping the old table to %1.dbf~
+        <source>Failed backuping the old table to {0}.dbf~
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="496"/>
-        <source>WARNING! I can neither save the new %1.dbf file
-nor restore it from the %2.dbf~ backup.
+        <source>WARNING! I can neither save the new {0}.dbf file
+nor restore it from the {0}.dbf~ backup.
 Please check it manually!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="498"/>
-        <source>Failed saving the changes to %1.dbf
+        <source>Failed saving the changes to {0}.dbf
 The layer will not be changed, please use the Save As button.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -387,7 +387,7 @@ The layer will not be changed, please use the Save As button.</source>
         <location filename="../tableManager_gui.py" line="507"/>
         <source>WARNING! The changes seem to be commited, but I can&apos;t reload the layer!
 Please check it out!
-The old table is backuped as %1.dbf~.</source>
+The old table is backuped as {0}.dbf~.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -397,7 +397,7 @@ The old table is backuped as %1.dbf~.</source>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="510"/>
-        <source>Saving successful. The old table has been backuped as %1.dbf~. Do you wish to keep the old symbology? Note that if the clasyfying field was moved, all objects may become invisible. In that case please adjust the symbology manually.</source>
+        <source>Saving successful. The old table has been backuped as {0}.dbf~. Do you wish to keep the old symbology? Note that if the clasyfying field was moved, all objects may become invisible. In that case please adjust the symbology manually.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

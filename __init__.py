@@ -24,33 +24,6 @@
 #
 #---------------------------------------------------------------------
 
-def name():
-    return 'Table Manager'
-
-def description():
-    return 'Manages the attribute table structure'
-
-def version():
-    return 'Version 0.4.4'
-
-def qgisMinimumVersion():
-    return '1.7'
-
-def icon():
-    return "icons/tableManagerIcon.png"
-
-def author():
-    return 'Borys Jurgiel'
-
-def authorName():
-    return 'Borys Jurgiel'
-
-def email():
-    return 'spamfilter@borysjurgiel.pl'
-
-def homepage():
-    return 'http://hub.qgis.org/projects/tablemanager'
-
 def classFactory(iface):
     from tableManager_plugin import tableManager
     return tableManager(iface)

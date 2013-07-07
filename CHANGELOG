@@ -1,4 +1,8 @@
-0.4.4
+0.5
+First version for QGIS 2
+
+
+0.4.4  (The last version for QGIS 1.x)
 - Fix http://hub.qgis.org/issues/7527
 - The plugin is now placed in the Vector menu and toolbar
 

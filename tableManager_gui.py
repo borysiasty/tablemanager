@@ -1,28 +1,19 @@
 # -*- coding: utf-8 -*-
-#-----------------------------------------------------------
+
+# ***************************************************************************
 #
-# Table Manager
-# Copyright (C) 2008-2011 Borys Jurgiel
+# TableManager
 #
-#-----------------------------------------------------------
+# Copyright (C) 2008 Borys Jurgiel
 #
-# licensed under the terms of GNU GPL 2
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License along
-# with this program; if not, print to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-#
-#---------------------------------------------------------------------
+# ***************************************************************************
+# *                                                                         *
+# *   This program is free software; you can redistribute it and/or modify  *
+# *   it under the terms of the GNU General Public License as published by  *
+# *   the Free Software Foundation; either version 2 of the License, or     *
+# *   (at your option) any later version.                                   *
+# *                                                                         *
+# ***************************************************************************
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -43,7 +34,7 @@ class DialogRename(QDialog, Ui_Rename):
     self.setupUi(self)
     self.fields = fields
     self.selection = selection
-    self.setWindowTitle(self.tr('Rename field: %1').arg(fields[selection].name()))
+    self.setWindowTitle(self.tr('Rename field: {0}').format(fields[selection].name()))
     self.lineEdit.setValidator(QRegExpValidator(QRegExp('[\w\ _]{,10}'),self))
     self.lineEdit.setText(fields[selection].name())
 
@@ -53,7 +44,7 @@ class DialogRename(QDialog, Ui_Rename):
       QDialog.reject(self)
       return
     for i in self.fields.values():
-      if self.newName().toUpper() == i.name().toUpper() and i != self.fields[self.selection]:
+      if self.newName().upper() == i.name().upper() and i != self.fields[self.selection]:
         QMessageBox.warning(self,self.tr('Rename field'),self.tr('There is another field with the same name.\nPlease type different one.'))
         return
     if not self.newName():
@@ -79,7 +70,7 @@ class DialogClone(QDialog, Ui_Clone):
     self.setWindowTitle(self.tr('Clone field: ')+fields[selection].name())
     self.comboDsn.addItem(self.tr('at the first position'))
     for i in range(len(fields)):
-      self.comboDsn.addItem(self.tr('after the %1 field').arg(fields[i].name()))
+      self.comboDsn.addItem(self.tr('after the {0} field').format(fields[i].name()))
     self.comboDsn.setCurrentIndex(selection+1)
     self.lineDsn.setValidator(QRegExpValidator(QRegExp('[\w\ _]{,10}'),self))
     self.lineDsn.setText(fields[selection].name()[:8] + '_2')
@@ -92,7 +83,7 @@ class DialogClone(QDialog, Ui_Clone):
         QMessageBox.warning(self,self.tr('Clone field'),self.tr('The new field\'s name must be different then source\'s one!'))
         return
     for i in self.fields.values():
-      if self.result()[1].toUpper() == i.name().toUpper():
+      if self.result()[1].upper() == i.name().upper():
         QMessageBox.warning(self,self.tr('Clone field'),self.tr('There is another field with the same name.\nPlease type different one.'))
         return
     QDialog.accept(self)
@@ -118,7 +109,7 @@ class DialogInsert(QDialog, Ui_Insert):
     self.comboType.addItem(self.tr('String'))
     self.comboPos.addItem(self.tr('at the first position'))
     for i in range(len(fields)):
-      self.comboPos.addItem(self.tr('after the %1 field').arg(fields[i].name()))
+      self.comboPos.addItem(self.tr('after the {0} field').format(fields[i].name()))
     self.comboPos.setCurrentIndex(selection+1)
 
   def accept(self):
@@ -126,7 +117,7 @@ class DialogInsert(QDialog, Ui_Insert):
       QMessageBox.warning(self,self.tr('Insert new field'),self.tr('The new name cannot be empty'))
       return
     for i in self.fields.values():
-      if self.result()[0].toUpper() == i.name().toUpper():
+      if self.result()[0].upper() == i.name().upper():
         QMessageBox.warning(self,self.tr('Insert new field'),self.tr('There is another field with the same name.\nPlease type different one.'))
         return
     QDialog.accept(self)
@@ -170,7 +161,7 @@ class TableManager(QDialog, Ui_Dialog):
     QObject.connect(self.fieldsTable, SIGNAL('itemSelectionChanged ()'), self.selectionChanged)
     QObject.connect(self.tabWidget, SIGNAL('currentChanged (int)'), self.drawDataTable)
 
-    self.setWindowTitle(self.tr('Table Manager: %1').arg(self.layer.name()))
+    self.setWindowTitle(self.tr('Table Manager: {0}').format(self.layer.name()))
     self.progressBar.setValue(0)
     self.restoreCfg()
     self.drawFieldsTable()
@@ -181,14 +172,9 @@ class TableManager(QDialog, Ui_Dialog):
   def readFields(self, providerFields): # Populates the self.fields dictionary with providerFields
     fieldsDict = {}
     i=0
-    if QGis.QGIS_VERSION_INT >= 10900:
-        for field in providerFields:
-            fieldsDict.update({i:field})
-            i+=1
-    else:
-        for k,  field in providerFields.items():
-            fieldsDict.update({i:field})
-            i+=1
+    for field in providerFields:
+        fieldsDict.update({i:field})
+        i+=1
     return fieldsDict
 
 
@@ -200,7 +186,7 @@ class TableManager(QDialog, Ui_Dialog):
       self.fieldsTable.setRowCount(i+1)
       item = QTableWidgetItem(fields[i].name())
       item.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
-      item.setData(Qt.UserRole, QVariant(i)) # set field index
+      item.setData(Qt.UserRole, i) # set field index
       self.fieldsTable.setItem(i,0,item)
       item = QTableWidgetItem(fields[i].typeName())
       item.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
@@ -221,36 +207,16 @@ class TableManager(QDialog, Ui_Dialog):
       stepp = 1
     progress = self.tr('Reading data ') # As a progress bar is used the main window's status bar, because the own one is not initialized yet
     n = 0
-    if QGis.QGIS_VERSION_INT >= 10900:
-            for feat in self.provider.getFeatures():
-                attrs = feat.attributes()
+    for feat in self.provider.getFeatures():
+        attrs = feat.attributes()
 
-                for i in range(len(attrs)):
-                    self.data[i] += [attrs[i].toString()]
+        for i in range(len(attrs)):
+            self.data[i] += [attrs[i]]
 
-                n += 1
-                if n % stepp == 0:
-                    progress += '|'
-                    self.iface.mainWindow().statusBar().showMessage(QString(progress))
-    else:
-            self.provider.select(self.provider.attributeIndexes())
-            feat = QgsFeature()
-            while self.provider.nextFeature(feat):
-                providerAttrs = feat.attributeMap()
-                attrs = {}
-
-                i=0
-                for k,  attr in providerAttrs.items():
-                    attrs.update({i:attr})
-                    i+=1
-
-                for i in range(len(attrs)):
-                    self.data[i] += [attrs[i].toString()]
-
-                n += 1
-                if n % stepp == 0:
-                    progress += '|'
-                    self.iface.mainWindow().statusBar().showMessage(QString(progress))
+        n += 1
+        if n % stepp == 0:
+            progress += '|'
+            self.iface.mainWindow().statusBar().showMessage(progress)
 
     self.iface.mainWindow().statusBar().showMessage('')
 
@@ -263,12 +229,12 @@ class TableManager(QDialog, Ui_Dialog):
     self.repaint()
     self.dataTable.setColumnCount(len(fields))
     self.dataTable.setRowCount(self.provider.featureCount())
-    header = QStringList()
+    header = []
     for i in fields.values():
       header.append(i.name())
     self.dataTable.setHorizontalHeaderLabels(header)
     self.progressBar.setRange (0, len(self.data)+1)
-    self.progressBar.setFormat(QString(self.tr('Drawing table') +': %p%'))
+    self.progressBar.setFormat(self.tr('Drawing table') +': %p%')
     formatting = True
     if formatting: # slower procedure, with formatting the table items
       for i in range(len(self.data)):
@@ -389,9 +355,9 @@ class TableManager(QDialog, Ui_Dialog):
   def doDelete(self): # Called when appropriate button was pressed
     #<---- Update: Santiago Banchero 09-06-2009 ---->
     #self.selection_list = sorted(self.selection_list,reverse=True)
-    all_fields_to_del = [unicode(self.fields[i].name()) for i in self.selection_list if i <> -1]
+    all_fields_to_del = [self.fields[i].name() for i in self.selection_list if i <> -1]
 
-    warning = self.tr('Are you sure you want to remove the following fields?\n%1').arg(", ".join(all_fields_to_del))
+    warning = self.tr('Are you sure you want to remove the following fields?\n{0}').format(", ".join(all_fields_to_del))
     if QMessageBox.warning(self, self.tr('Delete field'), warning , QMessageBox.Yes, QMessageBox.No) == QMessageBox.No:
         return
 
@@ -434,7 +400,7 @@ class TableManager(QDialog, Ui_Dialog):
         for i in fieldsToMove:
           self.fields[i] = self.fields[i-1]
           self.data[i] = self.data[i-1]
-      self.fields[aPos] = QgsField(aName, aVariant, aTypeName, aLength, aPrec, QString())
+      self.fields[aPos] = QgsField(aName, aVariant, aTypeName, aLength, aPrec, "")
       aData = []
       if aType == 2:
         aItem = None
@@ -475,25 +441,25 @@ class TableManager(QDialog, Ui_Dialog):
     # I believe the procedure below is as much safe as possible.
     encoding = self.provider.encoding()
     tmpDir = QDir.tempPath()
-    srcPath = self.provider.dataSourceUri().section('|',0,0)
+    srcPath = self.provider.dataSourceUri().split('|')[0]
     # without this one line code in win xp, srcName return something wrong,see below (patch from Volkan Kepoglu - thanks!)
     srcPath = srcPath.replace("\\","/")
-    if srcPath.right(4).toUpper() == '.SHP': # if the path points to the shp file, remove the extension...
-      srcPath.chop(4)
-      srcName = srcPath.right(srcPath.size() - srcPath.lastIndexOf('/') - 1)
+    if srcPath.upper().endswith('.SHP'): # if the path points to the shp file, remove the extension...
+      srcName = QFileInfo(srcPath).baseName()
+      srcPath = QFileInfo(srcPath).path() + '/' + QFileInfo(srcPath).baseName()
     else: # ...but if it points only to a directory, try to determine the name of the file inside!
       qPath = QDir(srcPath)
       qPath.setNameFilters(['*.shp', '*.SHP'])
       if len(qPath.entryList()) == 1: # there is exactly one shapefile inside
         srcName = qPath.entryList()[0]
-        srcName.chop(4)
+        srcName = QFileInfo(srcName).baseName()
         srcPath += '/' + srcName
       else:
-        QMessageBox.warning(self, self.tr('Table Manager'), self.tr("I cannot determine the layer source file: %1 !\nThe layer won't be changed, please use the Save As button.").arg(srcPath))
+        QMessageBox.warning(self, self.tr('Table Manager'), self.tr("I cannot determine the layer source file: {0} !\nThe layer won't be changed, please use the Save As button.").format(srcPath))
         return
     # write the layer to the temporary directory
     if self.writeToFile(tmpDir+'/'+srcName+'.shp', encoding) != 0:
-      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("Failed saving the changes to the temporary directory: %1 !\nThe layer won't be changed, please use the Save As button.").arg(tmpDir))
+      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("Failed saving the changes to the temporary directory: {0} !\nThe layer won't be changed, please use the Save As button.").format(tmpDir))
       QgsVectorFileWriter.deleteShapeFile(tmpDir+'/'+srcName+'.shp')
       return
     # try to remove the old .dbf~ backup
@@ -509,7 +475,7 @@ class TableManager(QDialog, Ui_Dialog):
         QgsMapLayerRegistry.instance().removeMapLayer(self.layer.getLayerID()) # API <= 1.8
     # rename the oryginal .dbf file to .dbf~
     if not QFile(srcPath+'.dbf').rename(srcPath+'.dbf~'):
-      QMessageBox.warning(self, self.tr('Table Manager'), self.tr('Failed backuping the old table to %1.dbf~\nThe layer won\'t be changed, please use the Save As button.').arg(srcPath))
+      QMessageBox.warning(self, self.tr('Table Manager'), self.tr('Failed backuping the old table to {0}.dbf~\nThe layer won\'t be changed, please use the Save As button.').format(srcPath))
       # we don't return now because layer has to be reloaded'''
     # copy the .dbf from the temp directory to the target location
     elif QFile(tmpDir+'/'+srcName+'.dbf').copy(srcPath+'.dbf'):
@@ -520,11 +486,11 @@ class TableManager(QDialog, Ui_Dialog):
     else:
       # something went wrong with copying the dbf file. Restore the dbf~ file
       if not QFile(srcPath+'.dbf~').rename(srcPath+'.dbf'):
-        QMessageBox.warning(self, self.tr('Table Manager'), self.tr('WARNING! I can neither save the new %1.dbf file\nnor restore it from the %2.dbf~ backup.\nPlease check it manually!').arg(srcName).arg(srcName))
+        QMessageBox.warning(self, self.tr('Table Manager'), self.tr('WARNING! I can neither save the new {0}.dbf file\nnor restore it from the {0}.dbf~ backup.\nPlease check it manually!').format(srcName))
         QgsVectorFileWriter.deleteShapeFile(tmpDir+'/'+srcName+'.shp')
         return
       # dbf~ file restored :
-      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("Failed saving the changes to %1.dbf\nThe layer will not be changed, please use the Save As button.").arg(srcPath))
+      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("Failed saving the changes to {0}.dbf\nThe layer will not be changed, please use the Save As button.").format(srcPath))
       '''
       QgsVectorFileWriter.deleteShapeFile(tmpDir+'/'+srcName+'.shp')
       return
@@ -536,10 +502,10 @@ class TableManager(QDialog, Ui_Dialog):
     '''layerName = self.layer.name()'''
     newLayer = QgsVectorLayer(srcPath+'.shp', layerName, 'ogr')
     if not newLayer.isValid():
-      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("WARNING! The changes seem to be commited, but I can't reload the layer!\nPlease check it out!\nThe old table is backuped as %1.dbf~.").arg(srcName))
+      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("WARNING! The changes seem to be commited, but I can't reload the layer!\nPlease check it out!\nThe old table is backuped as {0}.dbf~.").format(srcName))
       return
     # copy the style (it's possible only if the clasyfying field was not renamed!)
-    if QMessageBox.question(self, self.tr('Saving successful'),self.tr('Saving successful. The old table has been backuped as %1.dbf~.\nDo you wish to keep the layer style?\n\nNote that if the style depends on an attribute you\'ve renamed, all features on the layer will become invisible. In that case please adjust the style manually.').arg(srcName), QMessageBox.Yes, QMessageBox.No) == QMessageBox.Yes:
+    if QMessageBox.question(self, self.tr('Saving successful'),self.tr('Saving successful. The old table has been backuped as {0}.dbf~.\nDo you wish to keep the layer style?\n\nNote that if the style depends on an attribute you\'ve renamed, all features on the layer will become invisible. In that case please adjust the style manually.').format(srcName), QMessageBox.Yes, QMessageBox.No) == QMessageBox.Yes:
       '''#newLayer.copySymbologySettings(self.layer)'''
       resp = newLayer.loadNamedStyle( tmpDir+'/'+srcName+'.qml' )
       if not resp[1]:
@@ -573,52 +539,52 @@ class TableManager(QDialog, Ui_Dialog):
       fileDialog.selectNameFilter( self.lastFilter )
     if fileDialog.exec_() != QDialog.Accepted:
       return
-    fileName = unicode(fileDialog.selectedFiles().first())
-    encoding = str(fileDialog.encoding())
+    fileName = fileDialog.selectedFiles()[0]
+    encoding = fileDialog.encoding()
     if not fileName:
       return
     filePath = QFileInfo(fileName).absoluteFilePath()
-    if filePath.isEmpty():
+    if not filePath:
       return
     self.lastFilter = fileDialog.selectedNameFilter()
     driverName = QgsVectorFileWriter.supportedFiltersAndFormats()[ self.lastFilter ]
 
-    if driverName == 'ESRI Shapefile' and QFileInfo(filePath).suffix().toUpper() != 'SHP':
+    if driverName == 'ESRI Shapefile' and QFileInfo(filePath).suffix().upper() != 'SHP':
       filePath = filePath + '.shp'
-    if driverName == 'KML' and QFileInfo(filePath).suffix().toUpper() != 'KML':
+    if driverName == 'KML' and QFileInfo(filePath).suffix().upper() != 'KML':
       filePath = filePath + '.kml'
-    if driverName == 'MapInfo File' and QFileInfo(filePath).suffix().toUpper() not in ['MIF','TAB']:
+    if driverName == 'MapInfo File' and QFileInfo(filePath).suffix().upper() not in ['MIF','TAB']:
        filePath = filePath + '.mif'
-    if driverName == 'GeoJSON' and QFileInfo(filePath).suffix().toUpper() != 'GEOJSON':
+    if driverName == 'GeoJSON' and QFileInfo(filePath).suffix().upper() != 'GEOJSON':
       filePath = filePath + '.geojson'
-    if driverName == 'GeoRSS' and QFileInfo(filePath).suffix().toUpper() != 'XML':
+    if driverName == 'GeoRSS' and QFileInfo(filePath).suffix().upper() != 'XML':
       filePath = filePath + '.xml'
-    if driverName == 'GMT' and QFileInfo(filePath).suffix().toUpper() != 'GMT':
+    if driverName == 'GMT' and QFileInfo(filePath).suffix().upper() != 'GMT':
       filePath = filePath + '.gmt'
-    if driverName == 'SQLite' and QFileInfo(filePath).suffix().toUpper() != 'SQLITE':
+    if driverName == 'SQLite' and QFileInfo(filePath).suffix().upper() != 'SQLITE':
       filePath = filePath + '.sqlite'
-    if driverName in ['Interlis 1','Interlis 2'] and QFileInfo(filePath).suffix().toUpper() not in ['ITF','XML','ILI']:
+    if driverName in ['Interlis 1','Interlis 2'] and QFileInfo(filePath).suffix().upper() not in ['ITF','XML','ILI']:
       filePath = filePath + '.itf'
-    if driverName == 'GML' and QFileInfo(filePath).suffix().toUpper() != 'GML':
+    if driverName == 'GML' and QFileInfo(filePath).suffix().upper() != 'GML':
       filePath = filePath + '.gml'
-    if driverName == 'Geoconcept' and QFileInfo(filePath).suffix().toUpper() not in ['GXT','TXT']:
+    if driverName == 'Geoconcept' and QFileInfo(filePath).suffix().upper() not in ['GXT','TXT']:
       filePath = filePath + '.gxt'
-    if driverName == 'DXF' and QFileInfo(filePath).suffix().toUpper() != 'DXF':
+    if driverName == 'DXF' and QFileInfo(filePath).suffix().upper() != 'DXF':
       filePath = filePath + '.dxf'
-    if driverName == 'DGN' and QFileInfo(filePath).suffix().toUpper() != 'DGN':
+    if driverName == 'DGN' and QFileInfo(filePath).suffix().upper() != 'DGN':
       filePath = filePath + '.dgn'
-    if driverName == 'CSV' and QFileInfo(filePath).suffix().toUpper() != 'CSV':
+    if driverName == 'CSV' and QFileInfo(filePath).suffix().upper() != 'CSV':
       filePath = filePath + '.csv'
-    if driverName == 'BNA' and QFileInfo(filePath).suffix().toUpper() != 'BNA':
+    if driverName == 'BNA' and QFileInfo(filePath).suffix().upper() != 'BNA':
       filePath = filePath + '.bna'
-    if driverName == 'GPX' and QFileInfo(filePath).suffix().toUpper() != 'GPX':
+    if driverName == 'GPX' and QFileInfo(filePath).suffix().upper() != 'GPX':
       filePath = filePath + '.gpx'
-    if driverName == 'S57' and QFileInfo(filePath).suffix().toUpper() != 'S57':
+    if driverName == 'S57' and QFileInfo(filePath).suffix().upper() != 'S57':
       filePath = filePath + '.s57'
 
     # if saving to the source layer...
     reloadSourceLayer = False
-    if filePath == self.provider.dataSourceUri().section('|',0,0):
+    if filePath == self.provider.dataSourceUri().split('|')[0]:
       if QMessageBox.question(self, self.tr('Table Manager'), self.tr('You are attemping to save the changes to the original file. Are you sure you want to do this? If yes, the original layer will be removed from the legend.'), QMessageBox.Yes, QMessageBox.No) == QMessageBox.Yes:
         reloadSourceLayer = True
       else:
@@ -645,7 +611,7 @@ class TableManager(QDialog, Ui_Dialog):
       self.layer = self.iface.activeLayer()
       self.provider = self.layer.dataProvider()
       self.fields = self.readFields( self.provider.fields() )
-      self.setWindowTitle(self.tr('Table Manager: ')+self.layer.name())
+      self.setWindowTitle(self.tr('Table Manager: {0}').format(self.layer.name()))
     self.isUnsaved = False
     self.lastDirectory = QFileInfo(fileName).absolutePath()
     self.lastEncoding = encoding
@@ -661,66 +627,42 @@ class TableManager(QDialog, Ui_Dialog):
         QMessageBox.warning(self, self.tr('Table Manager'), self.tr('Cannot overwrite an existing shapefile.\nPlease remove it manually.'))
         return 1
     self.progressBar.setRange(0, self.provider.featureCount())
-    self.progressBar.setFormat(QString(self.tr('Saving data:') + ' %p%'))
+    self.progressBar.setFormat(self.tr('Saving data:') + ' %p%')
     self.progressBar.setValue(0)
     # create destination layer
-    if QGis.QGIS_VERSION_INT >= 10900:
-        fields = QgsFields()
-        keys = self.fields.keys()
-        keys.sort()
-        for key in keys:
-            fields.append(self.fields[key])
-    else:
-        self.provider.select(self.provider.attributeIndexes())
-        fields = self.fields
+    fields = QgsFields()
+    keys = self.fields.keys()
+    keys.sort()
+    for key in keys:
+        fields.append(self.fields[key])
     if driverName == 'ESRI Shapefile':
-        #lco = QStringList(["ENCODING="+encoding , "SHAPE_ENCODING="+encoding])
-        lco = QStringList( ["ENCODING="+encoding] )
+        #lco = ["ENCODING="+encoding , "SHAPE_ENCODING="+encoding]
+        lco = ["ENCODING="+encoding]
         settings = QSettings()
-        if QGis.QGIS_VERSION_INT >= 10800 and QGis.QGIS_VERSION_INT < 10900 and not settings.value("/qgis/ignoreShapeEncoding", False).toBool():
-            # the broken LDID autodetect in 1.8!! Must be set: encoding=UTF-8 encoding, lco=destination encoding
-            encoding = 'UTF-8'
     else:
-        lco = QStringList()
-    writer = QgsVectorFileWriter(filePath, encoding, fields, self.provider.geometryType(), self.provider.crs(), driverName, QStringList(), lco)
+        lco = []
+    writer = QgsVectorFileWriter(filePath, encoding, fields, self.provider.geometryType(), self.provider.crs(), driverName, [], lco)
     if writer.hasError():
-      QMessageBox.warning(self, self.tr('Table Manager'), self.tr('Error creating file. Probably the choosen format doesn\'t handle that data.'))
+      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("Error creating file. The errror message was:") + "<br/>" + writer.errorMessage() )
       self.progressBar.reset()
       return 2
     geom = QgsGeometry()
     n = 0
-    if QGis.QGIS_VERSION_INT >= 10900:
-            for feat in self.provider.getFeatures():
-                geom = feat.geometry()
-                outFeat = QgsFeature()
-                outFeat.setGeometry(geom)
-                attrs = []
-                for i in range(len(self.fields)):
-                    try:
-                        attrs += [QVariant(self.data[i][n])]
-                    except:
-                        attrs += [QVariant('')]
-                outFeat.initAttributes(len(attrs))
-                outFeat.setAttributes(attrs)
-                writer.addFeature(outFeat)
-                self.progressBar.setValue(n)
-                n += 1
-    else:
-            feat = QgsFeature()
-            while self.provider.nextFeature(feat):
-                geom = feat.geometry()
-                outFeat = QgsFeature()
-                outFeat.setGeometry(geom)
-                attrMap = {}
-                for i in range(len(self.fields)):
-                    try:
-                        attrMap[i] = QVariant(self.data[i][n])
-                    except:
-                        attrMap[i] = QVariant('')
-                outFeat.setAttributeMap(attrMap)
-                writer.addFeature(outFeat)
-                self.progressBar.setValue(n)
-                n += 1
+    for feat in self.provider.getFeatures():
+        geom = feat.geometry()
+        outFeat = QgsFeature()
+        outFeat.setGeometry(geom)
+        attrs = []
+        for i in range(len(self.fields)):
+            try:
+                attrs += [self.data[i][n]]
+            except:
+                attrs += ['']
+        outFeat.initAttributes(len(attrs))
+        outFeat.setAttributes(attrs)
+        writer.addFeature(outFeat)
+        self.progressBar.setValue(n)
+        n += 1
 
     del writer
     self.progressBar.reset()
@@ -737,16 +679,16 @@ class TableManager(QDialog, Ui_Dialog):
 
   def restoreCfg(self): # Restores previous session configuration or, if fails, init defaul values
     settings = QSettings()
-    self.restoreGeometry(settings.value('/Plugin-TableManager/geometry').toByteArray())
-    self.lastDirectory = settings.value('/Plugin-TableManager/lastDirectory', QVariant('.')).toString()
-    self.lastEncoding = settings.value('/Plugin-TableManager/lastEncoding', QVariant('UTF-8')).toString()
-    self.lastFilter = settings.value('/Plugin-TableManager/lastFilter', QVariant('')).toString()
+    self.restoreGeometry(settings.value('/Plugin-TableManager/geometry', QByteArray(), type=QByteArray))
+    self.lastDirectory = settings.value('/Plugin-TableManager/lastDirectory', '.', type=unicode)
+    self.lastEncoding = settings.value('/Plugin-TableManager/lastEncoding', 'UTF-8', type=unicode)
+    self.lastFilter = settings.value('/Plugin-TableManager/lastFilter', '', type=unicode)
 
 
 
   def saveCfg(self): # Saves configuration
     settings = QSettings()
-    settings.setValue('/Plugin-TableManager/geometry', QVariant(self.saveGeometry()))
-    settings.setValue('/Plugin-TableManager/lastDirectory', QVariant(self.lastDirectory))
-    settings.setValue('/Plugin-TableManager/lastEncoding', QVariant(self.lastEncoding))
-    settings.setValue('/Plugin-TableManager/lastFilter', QVariant(self.lastFilter))
+    settings.setValue('/Plugin-TableManager/geometry', self.saveGeometry())
+    settings.setValue('/Plugin-TableManager/lastDirectory', self.lastDirectory)
+    settings.setValue('/Plugin-TableManager/lastEncoding', self.lastEncoding)
+    settings.setValue('/Plugin-TableManager/lastFilter', self.lastFilter)
