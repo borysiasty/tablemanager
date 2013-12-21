@@ -77,15 +77,15 @@ class tableManager:
   if hasattr( self.iface, 'addPluginToVectorMenu' ):
     self.iface.addPluginToVectorMenu( u"&Table Manager", self.action )
   else:
-    self.iface.addPluginToMenu("&Table", self.action)
+    self.iface.addPluginToMenu(u"&Table Manager", self.action)
 
 
  def unload(self):
   # remove the plugin menu item and icon
   if hasattr( self.iface, 'removePluginVectorMenu' ):
-    self.iface.removePluginVectorMenu( u"&Table", self.action )
+    self.iface.removePluginVectorMenu( u"&Table Manager", self.action )
   else:
-    self.iface.removePluginMenu( u"&Table", self.action )
+    self.iface.removePluginMenu( u"&Table Manager", self.action )
   if hasattr( self.iface, 'removeVectorToolBarIcon' ):
     self.iface.removeVectorToolBarIcon(self.action)
   else:
