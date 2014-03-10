@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="ru_RU" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>Clone</name>
     <message>
@@ -109,7 +110,7 @@ p, li { white-space: pre-wrap; }
         <translation>Переименовать</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="417"/>
+        <location filename="../tableManagerUi.ui" line="528"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -120,12 +121,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Удалить выделенное поле&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="423"/>
+        <location filename="../tableManagerUi.ui" line="534"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="446"/>
+        <location filename="../tableManagerUi.ui" line="417"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -136,12 +137,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Вставить новое поле&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="452"/>
+        <location filename="../tableManagerUi.ui" line="423"/>
         <source>Insert</source>
         <translation>Вставить</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="475"/>
+        <location filename="../tableManagerUi.ui" line="446"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -152,12 +153,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Сделать копию выделенного поля&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="481"/>
+        <location filename="../tableManagerUi.ui" line="452"/>
         <source>Clone</source>
         <translation>Клонировать</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="511"/>
+        <location filename="../tableManagerUi.ui" line="564"/>
         <source>Table preview</source>
         <translation>Предпросмотр таблицы</translation>
     </message>
@@ -363,7 +364,7 @@ Please use Save As button instead.</source>
         <location filename="../tableManager_gui.py" line="360"/>
         <source>Are you sure you want to remove the following fields?
 {0}</source>
-        <translation>Вы действительно хотите удалить следующие поля?
+        <translation type="obsolete">Вы действительно хотите удалить следующие поля?
 {0}</translation>
     </message>
     <message>
@@ -493,6 +494,13 @@ Note that if the style depends on an attribute you&apos;ve renamed, all features
         <location filename="../tableManager_gui.py" line="646"/>
         <source>Error creating file. The errror message was:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="360"/>
+        <source>WARNING! Are you sure you want to remove the following fields?
+{0}</source>
+        <translation>Внимание! Вы действительно хотите удалить следующие поля?
+{0}</translation>
     </message>
 </context>
 </TS>

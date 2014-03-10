@@ -357,7 +357,7 @@ class TableManager(QDialog, Ui_Dialog):
     #self.selection_list = sorted(self.selection_list,reverse=True)
     all_fields_to_del = [self.fields[i].name() for i in self.selection_list if i <> -1]
 
-    warning = self.tr('Are you sure you want to remove the following fields?\n{0}').format(", ".join(all_fields_to_del))
+    warning = '<b>' + self.tr('WARNING! Are you sure you want to remove the following fields?\n{0}').format(", ".join(all_fields_to_del)) + '</b>'
     if QMessageBox.warning(self, self.tr('Delete field'), warning , QMessageBox.Yes, QMessageBox.No) == QMessageBox.No:
         return
 
