@@ -226,31 +226,36 @@ Proszę wybrać inną nazwę.</translation>
         <translation>STRING (tekst)</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="110"/>
+        <location filename="../tableManager_gui.py" line="111"/>
         <source>at the first position</source>
         <translation>na początku</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="112"/>
+        <location filename="../tableManager_gui.py" line="113"/>
         <source>after the {0} field</source>
         <translation>po kolumnie {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="121"/>
+        <location filename="../tableManager_gui.py" line="122"/>
         <source>Insert new field</source>
         <translation>Wstaw nową kolumnę</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="117"/>
+        <location filename="../tableManager_gui.py" line="118"/>
         <source>The new name cannot be empty</source>
         <translation>Nazwa nie może być pusta</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="121"/>
+        <location filename="../tableManager_gui.py" line="122"/>
         <source>There is another field with the same name.
 Please type different one.</source>
         <translation>Kolumna o takiej nazwie już istnieje.
 Proszę wybrać inną nazwę.</translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="110"/>
+        <source>Date</source>
+        <translation>DATE (data)</translation>
     </message>
 </context>
 <context>
@@ -327,27 +332,27 @@ Proszę wybrać inną nazwę.</translation>
         <translation>Proszę wybrać warstwę wektorową</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="208"/>
+        <location filename="../tableManager_gui.py" line="209"/>
         <source>Reading data </source>
         <translation>Wczytywanie danych</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="675"/>
+        <location filename="../tableManager_gui.py" line="686"/>
         <source>Table Manager</source>
         <translation>Menedżer tabel</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="536"/>
+        <location filename="../tableManager_gui.py" line="547"/>
         <source>Save as</source>
         <translation>Zapisz jako</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="630"/>
+        <location filename="../tableManager_gui.py" line="641"/>
         <source>Saving data:</source>
         <translation>Zapis danych:</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="508"/>
+        <location filename="../tableManager_gui.py" line="518"/>
         <source>Saving successful</source>
         <translation>Zapisano pomyślnie</translation>
     </message>
@@ -364,12 +369,12 @@ Please exit this mode before managing the table.</source>
 Proszę wyłączyć tryb edycji przed użyciem wtyczki.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="614"/>
+        <location filename="../tableManager_gui.py" line="625"/>
         <source>Table Manager: {0}</source>
         <translation>Menedżer tabel: {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="237"/>
+        <location filename="../tableManager_gui.py" line="238"/>
         <source>Drawing table</source>
         <translation>Rysowanie tabeli</translation>
     </message>
@@ -381,33 +386,33 @@ Proszę wyłączyć tryb edycji przed użyciem wtyczki.</translation>
 {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="361"/>
+        <location filename="../tableManager_gui.py" line="362"/>
         <source>Delete field</source>
         <translation>Usuń kolumnę</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="458"/>
+        <location filename="../tableManager_gui.py" line="468"/>
         <source>I cannot determine the layer source file: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>Nie mogę znaleźć źródła warstwy: {0}.!
 Warstwa nie będzie zmienona. Aby zapisać zmiany, użyj klawisza &quot;Zapisz jako&quot;.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="462"/>
+        <location filename="../tableManager_gui.py" line="472"/>
         <source>Failed saving the changes to the temporary directory: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>Nie mogę pisać do katalogu tymczasowego: {0} !
 Warstwa nie będzie zmienona. Aby zapisać zmiany, użyj klawisza &quot;Zapisz jako&quot;.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="478"/>
+        <location filename="../tableManager_gui.py" line="488"/>
         <source>Failed backuping the old table to {0}.dbf~
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>Nie mogę utworzyć kopii oryginalnej tabeli w pliku {0}.dbf~
 Warstwa nie będzie zmienona. Aby zapisać zmiany, użyj klawisza &quot;Zapisz jako&quot;.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="489"/>
+        <location filename="../tableManager_gui.py" line="499"/>
         <source>WARNING! I can neither save the new {0}.dbf file
 nor restore it from the {0}.dbf~ backup.
 Please check it manually!</source>
@@ -416,14 +421,14 @@ ani przywrócić go z kopii {0}.dbf~
 Proszę sprawdź to!</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="493"/>
+        <location filename="../tableManager_gui.py" line="503"/>
         <source>Failed saving the changes to {0}.dbf
 The layer will not be changed, please use the Save As button.</source>
         <translation>Nie mogę zapisać zmian do {0}.dbf
 Warstwa nie będzie zmienona. Aby zapisać zmiany, użyj klawisza &quot;Zapisz jako&quot;.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="505"/>
+        <location filename="../tableManager_gui.py" line="515"/>
         <source>WARNING! The changes seem to be commited, but I can&apos;t reload the layer!
 Please check it out!
 The old table is backuped as {0}.dbf~.</source>
@@ -432,31 +437,31 @@ Proszę sprawdź to!
 Kopię starej tabeli zapisałem jako {0}.dbf~.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="588"/>
+        <location filename="../tableManager_gui.py" line="599"/>
         <source>You are attemping to save the changes to the original file. Are you sure you want to do this? If yes, the original layer will be removed from the legend.</source>
         <translation>Poleciłeś mi nadpisać źródłowy plik. Na pewno chcesz to zrobić? Jeśli tak, oryginalna warstwa będzie usunięta z legendy.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="605"/>
+        <location filename="../tableManager_gui.py" line="616"/>
         <source>WARNING! The new layer seems to be created, but is invalid.
 It won&apos;t be loaded.</source>
         <translation>UWAGA! Wynikowa warstwa została utworzona, ale jest uszkodzona.
 Nie mogę jej załadować.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="627"/>
+        <location filename="../tableManager_gui.py" line="638"/>
         <source>Cannot overwrite an existing shapefile.
 Please remove it manually.</source>
         <translation>Nie mogę nadpisać istniejącego pliku Shapefile.
 Usuń go ręcznie, proszę.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="674"/>
+        <location filename="../tableManager_gui.py" line="685"/>
         <source>The table contains unsaved changes. Do you really want to quit?</source>
         <translation>Tabela zawiera niezapisane zmiany. Na pewno chcesz wyjść?</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="508"/>
+        <location filename="../tableManager_gui.py" line="518"/>
         <source>Saving successful. The old table has been backuped as {0}.dbf~.
 Do you wish to keep the layer style?
 
@@ -467,17 +472,17 @@ Teraz muszę przeładować warstwę. Czy mam zachować obecny styl wyświetlania
 Uwaga: jeśli styl zależy od atrybutu, który został usunięty lub przemianowany, wszystkie obiekty na warstwie zaczną być niewidoczne. W takim wypadku popraw styl ręcznie. </translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="512"/>
+        <location filename="../tableManager_gui.py" line="522"/>
         <source>This layer will be reloaded without its previous style (loading style failed)</source>
         <translation>Warstwa będzie przedładowana bez jej dotychczasowego stylu wyświetlania (załadowanie stylu nie powiodło się)</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="646"/>
+        <location filename="../tableManager_gui.py" line="657"/>
         <source>Error creating file. The errror message was:</source>
         <translation>Nie mogę utworzyć pliku. Wystąpił błąd:</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="360"/>
+        <location filename="../tableManager_gui.py" line="361"/>
         <source>WARNING! Are you sure you want to remove the following fields?
 {0}</source>
         <translation>UWAGA! Na pewno chcesz usunąć poniższe kolumny?

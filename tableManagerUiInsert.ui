@@ -79,7 +79,7 @@
         <number>-1</number>
        </property>
        <property name="maxVisibleItems" >
-        <number>3</number>
+        <number>5</number>
        </property>
       </widget>
      </item>

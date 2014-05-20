@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
+<!DOCTYPE TS><TS version="2.0" language="ru_RU" sourcelanguage="">
 <context>
     <name>Clone</name>
     <message>
@@ -226,31 +225,36 @@ Please type different one.</source>
         <translation>Строка</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="110"/>
+        <location filename="../tableManager_gui.py" line="111"/>
         <source>at the first position</source>
         <translation>в начало</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="112"/>
+        <location filename="../tableManager_gui.py" line="113"/>
         <source>after the {0} field</source>
         <translation>после поля {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="121"/>
+        <location filename="../tableManager_gui.py" line="122"/>
         <source>Insert new field</source>
         <translation>Вставить новое поле</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="117"/>
+        <location filename="../tableManager_gui.py" line="118"/>
         <source>The new name cannot be empty</source>
         <translation>Новое имя не может быть пустым</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="121"/>
+        <location filename="../tableManager_gui.py" line="122"/>
         <source>There is another field with the same name.
 Please type different one.</source>
         <translation>Поле с таким именем уже существует.
 Выберите другое имя.</translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="110"/>
+        <source>Date</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -346,17 +350,17 @@ Please use Save As button instead.</source>
 Используйте кнопку Сохранить как.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="614"/>
+        <location filename="../tableManager_gui.py" line="625"/>
         <source>Table Manager: {0}</source>
         <translation>Table Manager: {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="208"/>
+        <location filename="../tableManager_gui.py" line="209"/>
         <source>Reading data </source>
         <translation>Чтение данных </translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="237"/>
+        <location filename="../tableManager_gui.py" line="238"/>
         <source>Drawing table</source>
         <translation>Построение таблицы</translation>
     </message>
@@ -368,38 +372,38 @@ Please use Save As button instead.</source>
 {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="361"/>
+        <location filename="../tableManager_gui.py" line="362"/>
         <source>Delete field</source>
         <translation>Удалить поле</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="675"/>
+        <location filename="../tableManager_gui.py" line="686"/>
         <source>Table Manager</source>
         <translation>Table Manager</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="458"/>
+        <location filename="../tableManager_gui.py" line="468"/>
         <source>I cannot determine the layer source file: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>Не могу определить исходный файл слоя: {0}!
 Слой не будет изменен, пожалуйста, воспользуйтесь кнопкой Сохранить как.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="462"/>
+        <location filename="../tableManager_gui.py" line="472"/>
         <source>Failed saving the changes to the temporary directory: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>Не удалось сохранить изменения во временный каталог: {0}!
 Слой не будет изменен, пожалуйста, воспользуйтесь кнопкой Сохранить как.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="478"/>
+        <location filename="../tableManager_gui.py" line="488"/>
         <source>Failed backuping the old table to {0}.dbf~
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>Не удалось сохранить старую таблицу как {0}.dbf~
 Слой не будет изменен, пожалуйста, воспользуйтесь кнопкой Сохранить как.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="489"/>
+        <location filename="../tableManager_gui.py" line="499"/>
         <source>WARNING! I can neither save the new {0}.dbf file
 nor restore it from the {0}.dbf~ backup.
 Please check it manually!</source>
@@ -408,14 +412,14 @@ Please check it manually!</source>
 Пожалуйста, проверьте изменения в ручном режиме!</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="493"/>
+        <location filename="../tableManager_gui.py" line="503"/>
         <source>Failed saving the changes to {0}.dbf
 The layer will not be changed, please use the Save As button.</source>
         <translation>Не удалось сохранить изменения в {0}.dbf
 Слой не будет изменен, пожалуйста, воспользуйтесь кнопкой Сохранить как.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="505"/>
+        <location filename="../tableManager_gui.py" line="515"/>
         <source>WARNING! The changes seem to be commited, but I can&apos;t reload the layer!
 Please check it out!
 The old table is backuped as {0}.dbf~.</source>
@@ -424,7 +428,7 @@ The old table is backuped as {0}.dbf~.</source>
 Старая таблица сохранена как {0}.dbf~.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="508"/>
+        <location filename="../tableManager_gui.py" line="518"/>
         <source>Saving successful</source>
         <translation>Сохранено успешно</translation>
     </message>
@@ -434,17 +438,17 @@ The old table is backuped as {0}.dbf~.</source>
         <translation type="obsolete">Сохранение успешно. Старая таблица сохранена как {0}.dbf~. Вы хотите сохранить символику слоя? Помните, если поле классификации было удалено, все объекты могут стать невидимыми. В этом случае настройте символику вручную.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="536"/>
+        <location filename="../tableManager_gui.py" line="547"/>
         <source>Save as</source>
         <translation>Сохранить как</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="588"/>
+        <location filename="../tableManager_gui.py" line="599"/>
         <source>You are attemping to save the changes to the original file. Are you sure you want to do this? If yes, the original layer will be removed from the legend.</source>
         <translation>Попытка сохранить изменения в исходный файл. Вы уверены, что хотите сделать это? Если будет нажата кнопка Yes, исходный слой будет удален из легенды.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="605"/>
+        <location filename="../tableManager_gui.py" line="616"/>
         <source>WARNING! The new layer seems to be created, but is invalid.
 It won&apos;t be loaded.</source>
         <translation>ВНИМАНИЕ! Новый слой был создан, но он поврежден.
@@ -456,14 +460,14 @@ It won&apos;t be loaded.</source>
         <translation type="obsolete">Управление таблицами: </translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="627"/>
+        <location filename="../tableManager_gui.py" line="638"/>
         <source>Cannot overwrite an existing shapefile.
 Please remove it manually.</source>
         <translation>Не могу перезаписать существующий shape-файл.
 Пожалуйста, удалите его вручную.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="630"/>
+        <location filename="../tableManager_gui.py" line="641"/>
         <source>Saving data:</source>
         <translation>Сохранение данных:</translation>
     </message>
@@ -473,12 +477,12 @@ Please remove it manually.</source>
         <translation type="obsolete">Ошибка создания файла. Возможно, выбранный формат не может содержать эти данные.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="674"/>
+        <location filename="../tableManager_gui.py" line="685"/>
         <source>The table contains unsaved changes. Do you really want to quit?</source>
         <translation>В таблице есть несохраненные изменения. Вы действительно хотите выйти?</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="508"/>
+        <location filename="../tableManager_gui.py" line="518"/>
         <source>Saving successful. The old table has been backuped as {0}.dbf~.
 Do you wish to keep the layer style?
 
@@ -486,17 +490,17 @@ Note that if the style depends on an attribute you&apos;ve renamed, all features
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="512"/>
+        <location filename="../tableManager_gui.py" line="522"/>
         <source>This layer will be reloaded without its previous style (loading style failed)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="646"/>
+        <location filename="../tableManager_gui.py" line="657"/>
         <source>Error creating file. The errror message was:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="360"/>
+        <location filename="../tableManager_gui.py" line="361"/>
         <source>WARNING! Are you sure you want to remove the following fields?
 {0}</source>
         <translation>Внимание! Вы действительно хотите удалить следующие поля?

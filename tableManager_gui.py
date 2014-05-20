@@ -107,6 +107,8 @@ class DialogInsert(QDialog, Ui_Insert):
     self.comboType.addItem(self.tr('Integer'))
     self.comboType.addItem(self.tr('Real'))
     self.comboType.addItem(self.tr('String'))
+    self.comboType.addItem(self.tr('Date'))
+
     self.comboPos.addItem(self.tr('at the first position'))
     for i in range(len(fields)):
       self.comboPos.addItem(self.tr('after the {0} field').format(fields[i].name()))
@@ -291,7 +293,7 @@ class TableManager(QDialog, Ui_Dialog):
         self.butDown.setEnabled(False)
       else:
         self.butDown.setEnabled(True)
-      if self.fields[item].type() in [2,6,10]:
+      if self.fields[item].type() in [2,6,10,14]:
          self.butRename.setEnabled(True)
          self.butClone.setEnabled(True)
       else:
@@ -379,16 +381,25 @@ class TableManager(QDialog, Ui_Dialog):
     if dlg.exec_() == QDialog.Accepted:
       (aName, aType, aPos) = dlg.result()
       if aType == 0:
+        #Int
         aLength = 10
         aPrec = 0
         aVariant = QVariant.Int
         aTypeName = 'Integer'
       elif aType == 1:
+        #Real
         aLength = 32
         aPrec = 3
         aVariant = QVariant.Double
         aTypeName = 'Real'
+      elif aType == 3:
+        #Date
+        aLength = 0
+        aPrec = 0
+        aVariant = QVariant.Date
+        aTypeName = 'Date'
       else:
+        # aType 2 means String
         aLength = 80
         aPrec = 0
         aVariant = QVariant.String
