@@ -662,7 +662,8 @@ class TableManager(QDialog, Ui_Dialog):
     for feat in self.provider.getFeatures():
         geom = feat.geometry()
         outFeat = QgsFeature()
-        outFeat.setGeometry(geom)
+        if geom:
+            outFeat.setGeometry(geom)
         attrs = []
         for i in range(len(self.fields)):
             try:
