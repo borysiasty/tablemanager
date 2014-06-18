@@ -1,56 +1,46 @@
+0.5.5
+Fix problem with active layer detection. Code cleanups.
+
 0.5.4
 Don't crash at geometryless features. Fixes #1
-
 
 0.5.3
 Add support for Date fields
 
-
 0.5.2
 Make the Delete button more garish
-
 
 0.5.1
 Fix #9245: Not possible to disable plugin
 
-
 0.5
 First version for QGIS 2
-
 
 0.4.4  (The last version for QGIS 1.x)
 - Fix http://hub.qgis.org/issues/7527
 - The plugin is now placed in the Vector menu and toolbar
 
-
 0.4.3
 Fix broken shapefile encoding in QGIS 1.8: when saving and reloading a layer
-
 
 0.4.2
 - Don't fill newly created columns with zero (bug #5638)
 - GIS theme icon from Robert Szczepanek
 - more fixes for QGIS API > 1.8 (bug #7111)
 
-
 0.4.1
 fix for QGIS API > 1.8
-
 
 0.4
 fix for non-standard plugin directory - patch by Régis Haubourg
 
-
 0.3.8
 fix for moving fields (bug introduced in 0.3.7)
-
 
 0.3.7
 fix for multiselection
 
-
 0.3.6
 allow spaces in field names
 
-....
-no earlier entries :(
+...

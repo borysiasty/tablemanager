@@ -480,10 +480,7 @@ class TableManager(QDialog, Ui_Dialog):
     layerName = self.layer.name()
     QFile.remove( tmpDir+'/'+srcName+'.qml' )
     self.layer.saveNamedStyle( tmpDir+'/'+srcName+'.qml' )
-    if hasattr( QgsMapLayerRegistry.instance(), "removeMapLayers" ):
-        QgsMapLayerRegistry.instance().removeMapLayers([self.layer.id()])
-    else:
-        QgsMapLayerRegistry.instance().removeMapLayer(self.layer.getLayerID()) # API <= 1.8
+    QgsMapLayerRegistry.instance().removeMapLayers([self.layer.id()])
     # rename the oryginal .dbf file to .dbf~
     if not QFile(srcPath+'.dbf').rename(srcPath+'.dbf~'):
       QMessageBox.warning(self, self.tr('Table Manager'), self.tr('Failed backuping the old table to {0}.dbf~\nThe layer won\'t be changed, please use the Save As button.').format(srcPath))
@@ -525,12 +522,9 @@ class TableManager(QDialog, Ui_Dialog):
     # set encoding
     newLayer.setProviderEncoding( encoding )
     # reload the layer
-    if hasattr( QgsMapLayerRegistry.instance(), 'addMapLayers' ):
-        QgsMapLayerRegistry.instance().addMapLayers([newLayer])
-    else:
-        QgsMapLayerRegistry.instance().addMapLayer(newLayer)  # QPI <= 1.8
+    QgsMapLayerRegistry.instance().addMapLayers([newLayer])
     # point the self.layer to the new one.
-    self.layer = self.iface.activeLayer()
+    self.layer = newLayer
     self.provider = self.layer.dataProvider()
     self.fields = self.readFields( self.provider.fields() )
     self.butSave.setEnabled(False)
@@ -608,18 +602,12 @@ class TableManager(QDialog, Ui_Dialog):
     layer = QgsVectorLayer(filePath, QFileInfo(filePath).completeBaseName(), 'ogr')
     if layer.isValid():
         layer.setProviderEncoding( encoding )
-        if hasattr( QgsMapLayerRegistry.instance(), 'addMapLayers' ):
-            QgsMapLayerRegistry.instance().addMapLayers([layer])
-        else:
-            QgsMapLayerRegistry.instance().addMapLayer(layer)  # QPI <= 1.8
+        QgsMapLayerRegistry.instance().addMapLayers([layer])
     else:
       QMessageBox.warning(self, self.tr('Table Manager'), self.tr("WARNING! The new layer seems to be created, but is invalid.\nIt won't be loaded."))
     if reloadSourceLayer:
-      if hasattr( QgsMapLayerRegistry.instance(), "removeMapLayers" ):
-        QgsMapLayerRegistry.instance().removeMapLayers([self.layer.id()])
-      else:
-        QgsMapLayerRegistry.instance().removeMapLayer(self.layer.getLayerID()) # API <= 1.8
-      self.layer = self.iface.activeLayer()
+      QgsMapLayerRegistry.instance().removeMapLayers([self.layer.id()])
+      self.layer = layer
       self.provider = self.layer.dataProvider()
       self.fields = self.readFields( self.provider.fields() )
       self.setWindowTitle(self.tr('Table Manager: {0}').format(self.layer.name()))
