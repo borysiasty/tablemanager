@@ -104,6 +104,8 @@ class DialogInsert(QDialog, Ui_Insert):
     self.selection = selection
     self.setWindowTitle(self.tr('Insert field'))
     self.lineName.setValidator(QRegExpValidator(QRegExp('[\w\ _]{,10}'),self))
+    self.lineLength.setValidator(QRegExpValidator(QRegExp('\d*'),self))
+    self.linePrecision.setValidator(QRegExpValidator(QRegExp('\d*'),self))
     self.comboType.addItem(self.tr('Integer'))
     self.comboType.addItem(self.tr('Real'))
     self.comboType.addItem(self.tr('String'))
@@ -113,6 +115,9 @@ class DialogInsert(QDialog, Ui_Insert):
     for i in range(len(fields)):
       self.comboPos.addItem(self.tr('after the {0} field').format(fields[i].name()))
     self.comboPos.setCurrentIndex(selection+1)
+    self.comboType.currentIndexChanged.connect(self.comboTypeChanged)
+    
+    self.comboTypeChanged(self.comboType.currentIndex())
 
   def accept(self):
     if not self.result()[0]:
@@ -125,9 +130,21 @@ class DialogInsert(QDialog, Ui_Insert):
     QDialog.accept(self)
 
   def result(self):
-    return self.lineName.text(), self.comboType.currentIndex(), self.comboPos.currentIndex()
+    return self.lineName.text(), self.comboType.currentIndex(), self.comboPos.currentIndex(), self.lineLength.text(), self.linePrecision.text()
 
-
+  def comboTypeChanged(self, value):
+      if self.comboType.currentIndex() == 1: # Real
+        self.linePrecision.setEnabled(True)
+      else:
+        self.linePrecision.setText("")
+        self.linePrecision.setEnabled(False)
+     
+      if self.comboType.currentIndex() == 3: # date
+        self.lineLength.setText("")
+        self.lineLength.setEnabled(False)
+      else:
+        self.lineLength.setEnabled(True)
+        
 
 ########## CLASS TableManager ##############################
 
@@ -190,13 +207,19 @@ class TableManager(QDialog, Ui_Dialog):
       item.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
       item.setData(Qt.UserRole, i) # set field index
       self.fieldsTable.setItem(i,0,item)
-      item = QTableWidgetItem(fields[i].typeName())
+      item = QTableWidgetItem(self.formatFieldType(fields[i]))
       item.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
       self.fieldsTable.setItem(i,1,item)
     self.fieldsTable.setColumnWidth(0, 128)
-    self.fieldsTable.setColumnWidth(1, 64)
+    self.fieldsTable.setColumnWidth(1, 96)
 
-
+  def formatFieldType(self, field):
+      if field.type() == QVariant.Date:
+          return field.typeName()
+      elif field.type() == QVariant.Double:
+          return "%s(%d,%d)" % (field.typeName(), field.length(), field.precision())
+      else:
+          return "%s(%d)" % (field.typeName(), field.length())
 
   def readData(self): # Reads data from the 'provider' QgsDataProvider into the 'data' list [[column1] [column2] [column3]...]
     fields = self.fields
@@ -379,17 +402,17 @@ class TableManager(QDialog, Ui_Dialog):
   def doInsert(self): # Called when appropriate button was pressed
     dlg = DialogInsert(self.iface,self.fields,self.selection)
     if dlg.exec_() == QDialog.Accepted:
-      (aName, aType, aPos) = dlg.result()
+      (aName, aType, aPos, aLength, aPrec) = dlg.result()
       if aType == 0:
         #Int
-        aLength = 10
-        aPrec = 0
+        aLength = 10 if aLength == "" else int(aLength)
+        aPrec = 0 if aPrec == "" else int(aPrec)
         aVariant = QVariant.Int
         aTypeName = 'Integer'
       elif aType == 1:
         #Real
-        aLength = 32
-        aPrec = 3
+        aLength = 32 if aLength == "" else int(aLength)
+        aPrec = 3 if aPrec == "" else int(aPrec)
         aVariant = QVariant.Double
         aTypeName = 'Real'
       elif aType == 3:
@@ -400,7 +423,7 @@ class TableManager(QDialog, Ui_Dialog):
         aTypeName = 'Date'
       else:
         # aType 2 means String
-        aLength = 80
+        aLength = 80 if aLength == "" else int(aLength)
         aPrec = 0
         aVariant = QVariant.String
         aTypeName = 'String'
