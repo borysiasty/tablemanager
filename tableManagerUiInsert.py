@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'tableManagerUiInsert.ui'
 #
-# Created: Tue May 20 17:15:25 2014
+# Created: Wed Jul 23 07:13:42 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_Insert(object):
     def setupUi(self, Insert):
         Insert.setObjectName(_fromUtf8("Insert"))
-        Insert.resize(420, 260)
+        Insert.resize(420, 425)
         self.gridlayout = QtGui.QGridLayout(Insert)
         self.gridlayout.setObjectName(_fromUtf8("gridlayout"))
         self.vboxlayout = QtGui.QVBoxLayout()
@@ -73,15 +73,31 @@ class Ui_Insert(object):
         self.comboPos = QtGui.QComboBox(Insert)
         self.comboPos.setObjectName(_fromUtf8("comboPos"))
         self.vboxlayout.addWidget(self.comboPos)
+        spacerItem2 = QtGui.QSpacerItem(20, 10, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        self.vboxlayout.addItem(spacerItem2)
+        self.label_4 = QtGui.QLabel(Insert)
+        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.vboxlayout.addWidget(self.label_4)
+        self.lineLength = QtGui.QLineEdit(Insert)
+        self.lineLength.setObjectName(_fromUtf8("lineLength"))
+        self.vboxlayout.addWidget(self.lineLength)
+        spacerItem3 = QtGui.QSpacerItem(20, 10, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        self.vboxlayout.addItem(spacerItem3)
+        self.label_5 = QtGui.QLabel(Insert)
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.vboxlayout.addWidget(self.label_5)
+        self.linePrecision = QtGui.QLineEdit(Insert)
+        self.linePrecision.setObjectName(_fromUtf8("linePrecision"))
+        self.vboxlayout.addWidget(self.linePrecision)
         self.gridlayout.addLayout(self.vboxlayout, 0, 0, 1, 1)
         self.buttonBox = QtGui.QDialogButtonBox(Insert)
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.NoButton|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
         self.buttonBox.setCenterButtons(True)
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.gridlayout.addWidget(self.buttonBox, 3, 0, 1, 1)
-        spacerItem2 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.gridlayout.addItem(spacerItem2, 1, 0, 1, 1)
+        spacerItem4 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.gridlayout.addItem(spacerItem4, 1, 0, 1, 1)
 
         self.retranslateUi(Insert)
         self.comboType.setCurrentIndex(-1)
@@ -97,4 +113,6 @@ class Ui_Insert(object):
         self.label.setText(_translate("Insert", "Field name:", None))
         self.label_2.setText(_translate("Insert", "Field type:", None))
         self.label_3.setText(_translate("Insert", "Insert at position:", None))
+        self.label_4.setText(_translate("Insert", "Length:", None))
+        self.label_5.setText(_translate("Insert", "Precision:", None))
 

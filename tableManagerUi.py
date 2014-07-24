@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'tableManagerUi.ui'
 #
-# Created: Mon Mar 10 20:20:17 2014
-#      by: PyQt4 UI code generator 4.10.3
+# Created: Wed Jul 23 07:13:41 2014
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
