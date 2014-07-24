@@ -1,3 +1,6 @@
+0.6
+Added support for setting precision and length in inserted fields. By Guilhem Vellut.
+
 0.5.5
 Fix problem with active layer detection. Code cleanups.
 

@@ -12,7 +12,7 @@
 name=Table Manager
 description=Manages the attribute table structure
 description[pl]=Zarządza strukturą tabeli atrybutów
-version=0.5.5
+version=0.6
 qgisMinimumVersion=2.0
 
 # Optional items:
