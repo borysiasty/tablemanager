@@ -533,10 +533,10 @@ class TableManager(QDialog, Ui_Dialog):
     '''layerName = self.layer.name()'''
     newLayer = QgsVectorLayer(srcPath+'.shp', layerName, 'ogr')
     if not newLayer.isValid():
-      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("WARNING! The changes seem to be commited, but I can't reload the layer!\nPlease check it out!\nThe old table is backuped as {0}.dbf~.").format(srcName))
+      QMessageBox.warning(self, self.tr('Table Manager'), self.tr("WARNING! The changes seem to be commited, but I can't reload the layer!\nPlease check it out!\nThe old table is backed up as {0}.dbf~.").format(srcName))
       return
     # copy the style (it's possible only if the clasyfying field was not renamed!)
-    if QMessageBox.question(self, self.tr('Saving successful'),self.tr('Saving successful. The old table has been backuped as {0}.dbf~.\nDo you wish to keep the layer style?\n\nNote that if the style depends on an attribute you\'ve renamed, all features on the layer will become invisible. In that case please adjust the style manually.').format(srcName), QMessageBox.Yes, QMessageBox.No) == QMessageBox.Yes:
+    if QMessageBox.question(self, self.tr('Saving successful'),self.tr('Saving successful. The old table has been backed up as {0}.dbf~.\nDo you wish to keep the layer style?\n\nNote that if the style depends on an attribute you\'ve renamed, all features on the layer will become invisible. In that case please adjust the style manually.').format(srcName), QMessageBox.Yes, QMessageBox.No) == QMessageBox.Yes:
       '''#newLayer.copySymbologySettings(self.layer)'''
       resp = newLayer.loadNamedStyle( tmpDir+'/'+srcName+'.qml' )
       if not resp[1]:
