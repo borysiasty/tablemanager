@@ -1,3 +1,6 @@
+0.6.1
+Fix wording. Patch by Robert Ross Wardrup
+
 0.6
 Added support for setting precision and length in inserted fields. By Guilhem Vellut.
 
