@@ -12,6 +12,7 @@
 name=Table Manager
 description=Manages the attribute table structure
 description[pl]=Zarządza strukturą tabeli atrybutów
+about=This plugin was created as a workaround for removing and renaming columns in dbf tables, when there was no built-in solution in QGIS. Currently, its development is depreciated, so please consider using the Refactor Field algorithm from the Pocessing panel (advanced interface).
 version=0.6.2
 qgisMinimumVersion=2.0
 
