@@ -45,10 +45,10 @@ class DialogRename(QDialog, Ui_Rename):
       return
     for i in self.fields.values():
       if self.newName().upper() == i.name().upper() and i != self.fields[self.selection]:
-        QMessageBox.warning(self,self.tr('Rename field'),self.tr('There is another field with the same name.\nPlease type different one.'))
+        QMessageBox.warning(self,self.tr('Rename field'),self.tr('There is another field with the same name.\nPlease use a different one.'))
         return
     if not self.newName():
-      QMessageBox.warning(self,self.tr('Rename field'),self.tr('The new name cannot be empty'))
+      QMessageBox.warning(self,self.tr('Rename field'),self.tr('The new name cannot be empty.'))
       self.lineEdit.setText(self.fields[self.selection].name())
       return
     QDialog.accept(self)
@@ -77,14 +77,14 @@ class DialogClone(QDialog, Ui_Clone):
 
   def accept(self):
     if not self.result()[1]:
-      QMessageBox.warning(self,self.tr('Clone field'),self.tr('The new name cannot be empty'))
+      QMessageBox.warning(self,self.tr('Clone field'),self.tr('The new name cannot be empty.'))
       return
     if self.result()[1] == self.fields[self.selection].name():
-        QMessageBox.warning(self,self.tr('Clone field'),self.tr('The new field\'s name must be different then source\'s one!'))
+        QMessageBox.warning(self,self.tr('Clone field'),self.tr('The new field\'s name must be different than the source\'s!'))
         return
     for i in self.fields.values():
       if self.result()[1].upper() == i.name().upper():
-        QMessageBox.warning(self,self.tr('Clone field'),self.tr('There is another field with the same name.\nPlease type different one.'))
+        QMessageBox.warning(self,self.tr('Clone field'),self.tr('There is another field with the same name.\nPlease use a different one.'))
         return
     QDialog.accept(self)
 
@@ -121,11 +121,11 @@ class DialogInsert(QDialog, Ui_Insert):
 
   def accept(self):
     if not self.result()[0]:
-      QMessageBox.warning(self,self.tr('Insert new field'),self.tr('The new name cannot be empty'))
+      QMessageBox.warning(self,self.tr('Insert new field'),self.tr('The new name cannot be empty.'))
       return
     for i in self.fields.values():
       if self.result()[0].upper() == i.name().upper():
-        QMessageBox.warning(self,self.tr('Insert new field'),self.tr('There is another field with the same name.\nPlease type different one.'))
+        QMessageBox.warning(self,self.tr('Insert new field'),self.tr('There is another field with the same name.\nPlease use a different one.'))
         return
     QDialog.accept(self)
 
@@ -506,7 +506,7 @@ class TableManager(QDialog, Ui_Dialog):
     QgsMapLayerRegistry.instance().removeMapLayers([self.layer.id()])
     # rename the oryginal .dbf file to .dbf~
     if not QFile(srcPath+'.dbf').rename(srcPath+'.dbf~'):
-      QMessageBox.warning(self, self.tr('Table Manager'), self.tr('Failed backuping the old table to {0}.dbf~\nThe layer won\'t be changed, please use the Save As button.').format(srcPath))
+      QMessageBox.warning(self, self.tr('Table Manager'), self.tr('Failed backing up the old table to {0}.dbf~\nThe layer won\'t be changed, please use the Save As button.').format(srcPath))
       # we don't return now because layer has to be reloaded'''
     # copy the .dbf from the temp directory to the target location
     elif QFile(tmpDir+'/'+srcName+'.dbf').copy(srcPath+'.dbf'):
