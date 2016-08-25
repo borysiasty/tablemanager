@@ -24,9 +24,9 @@ qgisMinimumVersion=2.0
 tags=attribute table,table,fields,vector
 category=Vector
 
-homepage=http://hub.qgis.org/projects/tablemanager
-tracker=http://hub.qgis.org/projects/tablemanager/issues
-repository=http://github.com/borysiasty/tablemanager
+homepage=https://github.com/borysiasty/tablemanager
+tracker=https://github.com/borysiasty/tablemanager/issues
+repository=https://github.com/borysiasty/tablemanager
 icon=icons/tableManagerIcon.png
 experimental=False
 
