@@ -26,37 +26,37 @@
         <translation>Gestionnaire de table</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="112"/>
+        <location filename="../tableManagerUi.ui" line="580"/>
         <source>Save changes (available only for Shapefiles) </source>
         <translation>Enregistrer les changements (seulement disponible pour les *.shp) </translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="124"/>
+        <location filename="../tableManagerUi.ui" line="592"/>
         <source>Save</source>
         <translation>Enregistrer</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="144"/>
+        <location filename="../tableManagerUi.ui" line="612"/>
         <source>Save changes to a new layer</source>
         <translation>Enregistrer dans une nouvelle couche</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="147"/>
+        <location filename="../tableManagerUi.ui" line="615"/>
         <source>Save as...</source>
         <translation>Enregistrer sous...</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="300"/>
+        <location filename="../tableManagerUi.ui" line="111"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="305"/>
+        <location filename="../tableManagerUi.ui" line="116"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="324"/>
+        <location filename="../tableManagerUi.ui" line="135"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -67,12 +67,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Déplacer la sélection vers le haut&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="330"/>
+        <location filename="../tableManagerUi.ui" line="141"/>
         <source>Move Up</source>
         <translation>Vers le haut</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="359"/>
+        <location filename="../tableManagerUi.ui" line="170"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -83,12 +83,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Déplacer la sélection vers le bas&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="365"/>
+        <location filename="../tableManagerUi.ui" line="176"/>
         <source>Move Down</source>
         <translation>Vers le bas</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="388"/>
+        <location filename="../tableManagerUi.ui" line="199"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -99,12 +99,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Renommer la sélection&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="394"/>
+        <location filename="../tableManagerUi.ui" line="205"/>
         <source>Rename</source>
         <translation>Renommer</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="528"/>
+        <location filename="../tableManagerUi.ui" line="339"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -115,12 +115,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Supprimer la sélection&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="534"/>
+        <location filename="../tableManagerUi.ui" line="345"/>
         <source>Delete</source>
         <translation>Supprimer</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="417"/>
+        <location filename="../tableManagerUi.ui" line="228"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -131,12 +131,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Insérer un nouveau champ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="423"/>
+        <location filename="../tableManagerUi.ui" line="234"/>
         <source>Insert</source>
         <translation>Insérer</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="446"/>
+        <location filename="../tableManagerUi.ui" line="257"/>
         <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -147,24 +147,39 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copier la sélection&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="452"/>
+        <location filename="../tableManagerUi.ui" line="263"/>
         <source>Clone</source>
         <translation>Cloner</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="481"/>
-        <source>Fields management</source>
-        <translation type="obsolete">Gestion des champs</translation>
-    </message>
-    <message>
-        <location filename="../tableManagerUi.ui" line="564"/>
+        <location filename="../tableManagerUi.ui" line="375"/>
         <source>Table preview</source>
         <translation>Aperçu de la table</translation>
     </message>
     <message>
-        <location filename="../tableManagerUi.ui" line="248"/>
+        <location filename="../tableManagerUi.ui" line="59"/>
         <source>Fields</source>
         <translation>Champs</translation>
+    </message>
+    <message>
+        <location filename="../tableManagerUi.ui" line="404"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManagerUi.ui" line="452"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Now, when QGIS is able to process attribute tables internally, it&apos;s time to discontinue Table Manager. Please note it doesn&apos;t work well with recent QGIS (and GDAL) versions and &lt;span style=&quot; font-weight:600;&quot;&gt;several data corruptions were reported&lt;/span&gt;. For that reason please ensure you always have a backup copy of your data and be aware there are no plans for releasing any further versions (especially for the upcoming QGIS 3).&lt;/p&gt;&lt;p&gt;You are highly recommended to use the &lt;span style=&quot; font-style:italic;&quot;&gt;Refactor Fields&lt;/span&gt; algorithm available in the &lt;span style=&quot; font-style:italic;&quot;&gt;Processing&lt;/span&gt; toolbox instead. If you can&apos;t find it on the algorithm tree, you may need to switch to the &lt;span style=&quot; font-style:italic;&quot;&gt;Advanced Interface&lt;/span&gt; mode. If you&apos;re not sure how to use the &lt;span style=&quot; font-style:italic;&quot;&gt;Refactor Fields&lt;/span&gt;, try to double click the field names, types etc.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManagerUi.ui" line="478"/>
+        <source>Always show this tab on startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManagerUi.ui" line="426"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#c00000;&quot;&gt;WARNING&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c00000;&quot;&gt;This plugin is discontinued and &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#c00000;&quot;&gt;may corrupt your data.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c00000;&quot;&gt;Please use the &lt;/span&gt;&lt;span style=&quot; font-weight:600; font-style:italic; color:#c00000;&quot;&gt;Refactor Fields&lt;/span&gt;&lt;span style=&quot; color:#c00000;&quot;&gt; Processing algorithm instead.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -191,20 +206,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="80"/>
-        <source>The new name cannot be empty</source>
-        <translation>Le nouveau nom ne doit pas être vide</translation>
+        <source>The new name cannot be empty.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="83"/>
-        <source>The new field&apos;s name must be different then source&apos;s one!</source>
-        <translation>Le nouveau nom doit être différent de l&apos;ancien !</translation>
+        <source>The new field&apos;s name must be different than the source&apos;s!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="87"/>
         <source>There is another field with the same name.
-Please type different one.</source>
-        <translation>Ce nom est déjà attribué à un autre champ.
-Merci d&apos;en choisir un différent.</translation>
+Please use a different one.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -215,50 +229,49 @@ Merci d&apos;en choisir un différent.</translation>
         <translation>Insérer un champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="107"/>
+        <location filename="../tableManager_gui.py" line="109"/>
         <source>Integer</source>
         <translation>Entier</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="108"/>
+        <location filename="../tableManager_gui.py" line="110"/>
         <source>Real</source>
         <translation>Réel</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="109"/>
+        <location filename="../tableManager_gui.py" line="111"/>
         <source>String</source>
         <translation>Caractères</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="111"/>
+        <location filename="../tableManager_gui.py" line="114"/>
         <source>at the first position</source>
         <translation>en première position</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="113"/>
+        <location filename="../tableManager_gui.py" line="116"/>
         <source>after the {0} field</source>
         <translation>après le champ {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="122"/>
+        <location filename="../tableManager_gui.py" line="128"/>
         <source>Insert new field</source>
         <translation>Insérer un nouveau champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="118"/>
-        <source>The new name cannot be empty</source>
-        <translation>Le nouveau nom ne doit pas être vide</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="122"/>
-        <source>There is another field with the same name.
-Please type different one.</source>
-        <translation>Ce nom est déjà attribué à un autre champ.
-Merci d&apos;en choisir un différent.</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="110"/>
+        <location filename="../tableManager_gui.py" line="112"/>
         <source>Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="124"/>
+        <source>The new name cannot be empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="128"/>
+        <source>There is another field with the same name.
+Please use a different one.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -277,37 +290,46 @@ Merci d&apos;en choisir un différent.</translation>
     <message>
         <location filename="../tableManager_gui.py" line="48"/>
         <source>There is another field with the same name.
-Please type different one.</source>
-        <translation>Ce nom est déjà attribué à un autre champ.
-Merci d&apos;en choisir un différent.</translation>
+Please use a different one.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tableManager_gui.py" line="51"/>
-        <source>The new name cannot be empty</source>
-        <translation>Le nouveau nom ne doit pas être vide</translation>
+        <source>The new name cannot be empty.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Insert</name>
     <message>
-        <location filename="../tableManagerUiInsert.ui" line="13"/>
+        <location filename="../tableManagerUiInsert.ui" line="14"/>
         <source>Insert field</source>
         <translation>Insérer un champ</translation>
     </message>
     <message>
-        <location filename="../tableManagerUiInsert.ui" line="27"/>
+        <location filename="../tableManagerUiInsert.ui" line="28"/>
         <source>Field name:</source>
         <translation>Nom du champ :</translation>
     </message>
     <message>
-        <location filename="../tableManagerUiInsert.ui" line="72"/>
+        <location filename="../tableManagerUiInsert.ui" line="73"/>
         <source>Field type:</source>
         <translation>Type du champ :</translation>
     </message>
     <message>
-        <location filename="../tableManagerUiInsert.ui" line="111"/>
+        <location filename="../tableManagerUiInsert.ui" line="112"/>
         <source>Insert at position:</source>
         <translation>Insérer en position :</translation>
+    </message>
+    <message>
+        <location filename="../tableManagerUiInsert.ui" line="138"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManagerUiInsert.ui" line="164"/>
+        <source>Precision:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -326,7 +348,7 @@ Merci d&apos;en choisir un différent.</translation>
 <context>
     <name>TableManager</name>
     <message>
-        <location filename="../tableManager_gui.py" line="686"/>
+        <location filename="../tableManager_gui.py" line="699"/>
         <source>Table Manager</source>
         <translation>Gestionnaire de table</translation>
     </message>
@@ -353,55 +375,41 @@ Please exit this mode before managing the table.</source>
 Merci de sortir de ce mode avant de gérer sa structure.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="625"/>
+        <location filename="../tableManager_gui.py" line="637"/>
         <source>Table Manager: {0}</source>
         <translation>Gestionnaire de table : {0}</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="209"/>
+        <location filename="../tableManager_gui.py" line="233"/>
         <source>Reading data </source>
         <translation>Lecture des données</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="238"/>
+        <location filename="../tableManager_gui.py" line="262"/>
         <source>Drawing table</source>
         <translation>Lecture en cours</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="360"/>
-        <source>Are you sure you want to remove the following fields?
-{0}</source>
-        <translation type="obsolete">Etes-vous sûr de vouloir supprimer ces champs ?
-{0}</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="362"/>
+        <location filename="../tableManager_gui.py" line="386"/>
         <source>Delete field</source>
         <translation>Suppression de champ</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="468"/>
+        <location filename="../tableManager_gui.py" line="492"/>
         <source>I cannot determine the layer source file: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>Le fichier source de cette couche est inconnu : {0} !
 La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="472"/>
+        <location filename="../tableManager_gui.py" line="496"/>
         <source>Failed saving the changes to the temporary directory: {0} !
 The layer won&apos;t be changed, please use the Save As button.</source>
         <translation>L&apos;enregistrement des modifications dans le dossier temporaire a échoué : {0} !
 La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="488"/>
-        <source>Failed backuping the old table to {0}.dbf~
-The layer won&apos;t be changed, please use the Save As button.</source>
-        <translation>Echec de la copie de secours de l&apos;ancienne table vers {0}.dbf~
-La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="499"/>
+        <location filename="../tableManager_gui.py" line="520"/>
         <source>WARNING! I can neither save the new {0}.dbf file
 nor restore it from the {0}.dbf~ backup.
 Please check it manually!</source>
@@ -410,103 +418,88 @@ ni le restaurer depuis la copie {0}.dbf~
 Merci de faire une vérification manuelle !</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="503"/>
+        <location filename="../tableManager_gui.py" line="524"/>
         <source>Failed saving the changes to {0}.dbf
 The layer will not be changed, please use the Save As button.</source>
         <translation>L&apos;enregistrement des modifications vers {0}.dbf a échoué.
 La couche ne sera pas modifiée. Merci de choisir le bouton Enregistrer sous.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="515"/>
-        <source>WARNING! The changes seem to be commited, but I can&apos;t reload the layer!
-Please check it out!
-The old table is backuped as {0}.dbf~.</source>
-        <translation>ATTENTION ! Les modifications semblent bien appliquées mais je n&apos;arrive pas à recharger la couche !
-Merci de vérifier ce qui ne va pas !
-L&apos;ancienne table est sauvegardée sous le nom : {0}.dbf~.</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="518"/>
+        <location filename="../tableManager_gui.py" line="539"/>
         <source>Saving successful</source>
         <translation>Enregistrement réussi</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="517"/>
-        <source>Saving successful. The old table has been backuped as {0}.dbf~. Do you wish to keep the old symbology? Note that if the clasyfying field was moved, all objects may become invisible. In that case please adjust the symbology manually.</source>
-        <translation type="obsolete">Enregistrement réussi. L&apos;ancienne table est sauvegardée sous le nom : {0}.dbf~.
-Voulez-vous conserver l&apos;ancienne symbologie ? Notez que si le champ de classification a été déplacé, tous les objets risquent de devenir invisibles. Dans ce cas, merci d&apos;ajuster la symbologie à la main.</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="547"/>
+        <location filename="../tableManager_gui.py" line="565"/>
         <source>Save as</source>
         <translation>Enregistrer sous</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="599"/>
+        <location filename="../tableManager_gui.py" line="617"/>
         <source>You are attemping to save the changes to the original file. Are you sure you want to do this? If yes, the original layer will be removed from the legend.</source>
         <translation>Vous tentez d&apos;enregistrer les modifications sur le fichier d&apos;origine. Etes-vous sûr de le vouloir ? Si oui, la couche d&apos;origine sera retirée de la légende.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="616"/>
+        <location filename="../tableManager_gui.py" line="631"/>
         <source>WARNING! The new layer seems to be created, but is invalid.
 It won&apos;t be loaded.</source>
         <translation>Attention ! La nouvelle couche semble bien créée mais elle n&apos;est pas valide.
 Elle ne sera pas chargée.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="617"/>
-        <source>Table Manager: </source>
-        <translation type="obsolete">Gestionnaire de tables : </translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="638"/>
+        <location filename="../tableManager_gui.py" line="650"/>
         <source>Cannot overwrite an existing shapefile.
 Please remove it manually.</source>
         <translation>Echec de l&apos;enregistrement du fichier shape (un fichier existe avec le meme nom).
 Merci de le supprimer manuellement.</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="641"/>
+        <location filename="../tableManager_gui.py" line="653"/>
         <source>Saving data:</source>
         <translation>Enregistrement des données :</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="639"/>
-        <source>Error creating file. Probably the choosen format doesn&apos;t handle that data.</source>
-        <translation type="obsolete">Erreur dans la création du fichier. Le format choisi de gère probablement pas ces données.</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="685"/>
+        <location filename="../tableManager_gui.py" line="698"/>
         <source>The table contains unsaved changes. Do you really want to quit?</source>
         <translation>Vos modifications apportées à la table n&apos;ont pas été enregistrées. Voulez-vous vraiment quitter ?</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="522"/>
+        <location filename="../tableManager_gui.py" line="543"/>
         <source>This layer will be reloaded without its previous style (loading style failed)</source>
         <translation>Cette couche sera rechargée sans son style précédent (le chargement du style a échoué)</translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="518"/>
-        <source>Saving successful. The old table has been backuped as {0}.dbf~.
-Do you wish to keep the layer style?
-
-Note that if the style depends on an attribute you&apos;ve renamed, all features on the layer will become invisible. In that case please adjust the style manually.</source>
-        <translation>Enregistrement réussi. L&apos;ancienne table est sauvegardée sous le nom : {0}.dbf~.
-Voulez-vous conserver l&apos;ancien style ?
-
-Notez que si le style dépend d&apos;un attribut modifié, tous les objets de la couche risquent de devenir invisibles. Dans ce cas, vous pourrez ajuster le style à la main.</translation>
-    </message>
-    <message>
-        <location filename="../tableManager_gui.py" line="657"/>
+        <location filename="../tableManager_gui.py" line="669"/>
         <source>Error creating file. The errror message was:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tableManager_gui.py" line="361"/>
+        <location filename="../tableManager_gui.py" line="385"/>
         <source>WARNING! Are you sure you want to remove the following fields?
 {0}</source>
         <translation>AVERTISSEMENT! Etes-vous sûr de vouloir supprimer ces champs ?
 {0}</translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="509"/>
+        <source>Failed backing up the old table to {0}.dbf~
+The layer won&apos;t be changed, please use the Save As button.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="536"/>
+        <source>WARNING! The changes seem to be commited, but I can&apos;t reload the layer!
+Please check it out!
+The old table is backed up as {0}.dbf~.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tableManager_gui.py" line="539"/>
+        <source>Saving successful. The old table has been backed up as {0}.dbf~.
+Do you wish to keep the layer style?
+
+Note that if the style depends on an attribute you&apos;ve renamed, all features on the layer will become invisible. In that case please adjust the style manually.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

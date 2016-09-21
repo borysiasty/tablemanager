@@ -116,7 +116,7 @@ class DialogInsert(QDialog, Ui_Insert):
       self.comboPos.addItem(self.tr('after the {0} field').format(fields[i].name()))
     self.comboPos.setCurrentIndex(selection+1)
     self.comboType.currentIndexChanged.connect(self.comboTypeChanged)
-    
+
     self.comboTypeChanged(self.comboType.currentIndex())
 
   def accept(self):
@@ -138,13 +138,13 @@ class DialogInsert(QDialog, Ui_Insert):
       else:
         self.linePrecision.setText("")
         self.linePrecision.setEnabled(False)
-     
+
       if self.comboType.currentIndex() == 3: # date
         self.lineLength.setText("")
         self.lineLength.setEnabled(False)
       else:
         self.lineLength.setEnabled(True)
-        
+
 
 ########## CLASS TableManager ##############################
 
@@ -706,6 +706,12 @@ class TableManager(QDialog, Ui_Dialog):
     self.lastDirectory = settings.value('/Plugin-TableManager/lastDirectory', '.', type=unicode)
     self.lastEncoding = settings.value('/Plugin-TableManager/lastEncoding', 'UTF-8', type=unicode)
     self.lastFilter = settings.value('/Plugin-TableManager/lastFilter', '', type=unicode)
+    displayWarning = settings.value('/Plugin-TableManager/displayWarning', True, type=bool)
+    self.cbWarning.setChecked(displayWarning)
+    if displayWarning:
+        self.tabWidget.setCurrentIndex(2)
+    else:
+        self.tabWidget.setCurrentIndex(0)
 
 
 
@@ -715,3 +721,10 @@ class TableManager(QDialog, Ui_Dialog):
     settings.setValue('/Plugin-TableManager/lastDirectory', self.lastDirectory)
     settings.setValue('/Plugin-TableManager/lastEncoding', self.lastEncoding)
     settings.setValue('/Plugin-TableManager/lastFilter', self.lastFilter)
+
+
+
+  def on_cbWarning_clicked(self):
+    # This is an automatic Qt slot
+    settings = QSettings()
+    settings.setValue('/Plugin-TableManager/displayWarning', self.cbWarning.isChecked())
