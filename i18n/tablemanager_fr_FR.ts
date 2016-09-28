@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="fr_FR">
 <context>
     <name>Clone</name>
     <message>
@@ -164,22 +165,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../tableManagerUi.ui" line="404"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos</translation>
     </message>
     <message>
         <location filename="../tableManagerUi.ui" line="452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Now, when QGIS is able to process attribute tables internally, it&apos;s time to discontinue Table Manager. Please note it doesn&apos;t work well with recent QGIS (and GDAL) versions and &lt;span style=&quot; font-weight:600;&quot;&gt;several data corruptions were reported&lt;/span&gt;. For that reason please ensure you always have a backup copy of your data and be aware there are no plans for releasing any further versions (especially for the upcoming QGIS 3).&lt;/p&gt;&lt;p&gt;You are highly recommended to use the &lt;span style=&quot; font-style:italic;&quot;&gt;Refactor Fields&lt;/span&gt; algorithm available in the &lt;span style=&quot; font-style:italic;&quot;&gt;Processing&lt;/span&gt; toolbox instead. If you can&apos;t find it on the algorithm tree, you may need to switch to the &lt;span style=&quot; font-style:italic;&quot;&gt;Advanced Interface&lt;/span&gt; mode. If you&apos;re not sure how to use the &lt;span style=&quot; font-style:italic;&quot;&gt;Refactor Fields&lt;/span&gt;, try to double click the field names, types etc.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maintenant que QGIS est capable de manipuler les tables attributaires directement, il est temps d&apos;arrêter Table Manager. Il ne fonctionne plus très bien avec les dernières versions de QGIS (et de GDAL) et &lt;span style=&quot; font-weight:600;&quot;&gt;des corruptions de données ont été signalées&lt;/span&gt; (assurez-vous d&apos;avoir toujours des sauvegardes !). Pour ces raisons, il n&apos;est pas prévu de sortir de nouvelles versions et certainement pas pour QGIS3.&lt;/p&gt;&lt;p&gt;Vous êtes fortement invités à utiliser &lt;span style=&quot; font-style:italic;&quot;&gt;Refactor Fields&lt;/span&gt; qui est disponible dans la boîte à outils des Traitements. Si vous ne le trouvez pas dans l&apos;arborescence des algorithmes, il vous faudra peut-être passer en mode &lt;span style=&quot; font-style:italic;&quot;&gt;d&apos;interface avancée&lt;/span&gt;. Si vous n&apos;êtes pas sûr de savoir l&apos;utiliser, faites une copie de vos données et essayez de cliquer sur le nom des champs, les types, etc.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tableManagerUi.ui" line="478"/>
         <source>Always show this tab on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Toujours afficher cet avertissement</translation>
     </message>
     <message>
         <location filename="../tableManagerUi.ui" line="426"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#c00000;&quot;&gt;WARNING&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c00000;&quot;&gt;This plugin is discontinued and &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#c00000;&quot;&gt;may corrupt your data.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c00000;&quot;&gt;Please use the &lt;/span&gt;&lt;span style=&quot; font-weight:600; font-style:italic; color:#c00000;&quot;&gt;Refactor Fields&lt;/span&gt;&lt;span style=&quot; color:#c00000;&quot;&gt; Processing algorithm instead.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#c00000;&quot;&gt;ATTENTION !&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c00000;&quot;&gt;Cette extension n&apos;est plus maintenue et &lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#c00000;&quot;&gt;peut corrompre vos données. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c00000;&quot;&gt;Veuillez utiliser le traitement &lt;/span&gt;&lt;span style=&quot; font-weight:600; font-style:italic; color:#c00000;&quot;&gt;Refactor Fields&lt;/span&gt;&lt;span style=&quot; color:#c00000;&quot;&gt; à la place.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
